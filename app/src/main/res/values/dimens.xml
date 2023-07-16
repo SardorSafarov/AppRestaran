@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="txt_24sp">24sp</dimen>
+    <dimen name="padding_margin_30dp">30dp</dimen>
+    <dimen name="txt_22sp">22sp</dimen>
+    <dimen name="txt_18sp">18sp</dimen>
+    <dimen name="padding_margin_18dp">18dp</dimen>
+    <dimen name="padding_margin_14dp">14dp</dimen>
+    <dimen name="padding_margin_20dp">20dp</dimen>
+    <dimen name="radius_10dp">10dp</dimen>
+</resources>
