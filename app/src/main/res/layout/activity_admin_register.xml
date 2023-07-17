@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".activity.adminPanel.AdminRegisterActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_margin_30dp"
+            android:text="@string/ro_yxatdan_o_tish"
+            android:textColor="#585858"
+            android:textSize="@dimen/txt_40sp"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_margin_30dp"
+
+            app:boxStrokeColor="@color/yellow"
+            app:hintTextColor="@color/yellow"
+            android:hint="@string/ismingizni_kiriting">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_login"
+                android:inputType="textCapWords"
+                android:textCursorDrawable="@color/yellow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/yellow"
+            app:hintTextColor="@color/yellow"
+            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
+            android:layout_marginBottom="@dimen/padding_margin_30dp"
+            android:hint="@string/restoran_nomi">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:inputType="textCapWords"
+                android:textCursorDrawable="@color/yellow"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/yellow"
+            app:hintTextColor="@color/yellow"
+            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
+            android:layout_marginBottom="@dimen/padding_margin_30dp"
+            android:hint="@string/tel_number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:textCursorDrawable="@color/yellow"
+                android:layout_height="match_parent"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
+            android:layout_marginBottom="@dimen/padding_margin_30dp"
+            android:hint="@string/parol"
+            app:passwordToggleEnabled="true"
+            app:boxStrokeColor="@color/yellow"
+            app:hintTextColor="@color/yellow"
+            app:passwordToggleTint="@color/yellow"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:textCursorDrawable="@color/yellow"
+                android:layout_height="match_parent"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/yellow"
+            app:hintTextColor="@color/yellow"
+            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
+            android:layout_marginBottom="@dimen/padding_margin_30dp"
+            android:hint="@string/parolni_qayta_kirting"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/yellow">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textCursorDrawable="@color/yellow"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/padding_margin_30dp"
+                android:text="@string/men_offerta_shartlariga_roziman" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
+            android:layout_marginBottom="@dimen/padding_margin_30dp"
+            android:background="@drawable/bg_btn_next"
+            android:elevation="0dp"
+            android:text="@string/kirish"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>

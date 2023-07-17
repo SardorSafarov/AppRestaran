@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat
 import com.example.apprestaran.R
 import com.example.apprestaran.activity.login.LoginActivity
 import com.example.apprestaran.databinding.ActivityLanguageBinding
+import com.example.apprestaran.`fun`.D
 
 class LanguageActivity : AppCompatActivity() {
     lateinit var binding: ActivityLanguageBinding
@@ -20,6 +21,7 @@ class LanguageActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.apply {
             btnUz.setOnClickListener {
+                btnUz.setBackgroundColor(Color.parseColor("#ffff00"))
                 btnRu.setBackgroundColor(Color.parseColor("#ffffff"))
             }
             btnRu.setOnClickListener {

@@ -1,5 +1,6 @@
 package com.example.apprestaran.activity.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -7,6 +8,7 @@ import android.widget.LinearLayout
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.content.ContextCompat
 import com.example.apprestaran.R
+import com.example.apprestaran.activity.adminPanel.AdminRegisterActivity
 import com.example.apprestaran.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -18,12 +20,16 @@ class LoginActivity : AppCompatActivity() {
         window.setStatusBarColor(ContextCompat.getColor(this,R.color.statusbar));
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        btnClickListener()
+
+    }
+
+    private fun btnClickListener() {
         binding.apply {
             btnLinear1.setOnClickListener {
                 if (linear1) {
                     line1.visibility = View.VISIBLE
                     line2.visibility = View.GONE
-                    txt2.text = "+"
                 }else{
                     line1.visibility = View.GONE
                 }
@@ -34,13 +40,18 @@ class LoginActivity : AppCompatActivity() {
                 if (linear2) {
                     line2.visibility = View.VISIBLE
                     line1.visibility = View.GONE
-                    txt1.text = "+"
                 }else{
                     line2.visibility = View.GONE
                 }
                 txt2.text = if(linear2) "-" else "+"
                 linear2 = !linear2
             }
+
+            btnRegister.setOnClickListener {
+                startActivity(Intent(this@LoginActivity,AdminRegisterActivity::class.java))
+            }
         }
+
+
     }
 }
