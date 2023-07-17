@@ -20,7 +20,6 @@ class LanguageActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.apply {
             btnUz.setOnClickListener {
-                btnUz.setBackgroundColor(Color.parseColor("#ffff00"))
                 btnRu.setBackgroundColor(Color.parseColor("#ffffff"))
             }
             btnRu.setOnClickListener {
