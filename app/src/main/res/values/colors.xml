@@ -3,6 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background">#e5eaf0</color>
-    <color name="yellow">#ffff00</color>
+    <color name="yellow">#ffd80c</color>
     <color name="statusbar">#ffd80c</color>
 </resources>

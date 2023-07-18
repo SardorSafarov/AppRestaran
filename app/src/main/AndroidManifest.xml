@@ -15,7 +15,7 @@
         <activity
             android:name=".activity.adminPanel.AdminMainActivity"
             android:exported="true"
-            android:label="@string/title_activity_admin_main" >
+           >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
