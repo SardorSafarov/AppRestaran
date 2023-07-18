@@ -15,4 +15,8 @@
     <string name="ismingizni_kiriting">Ismingizni kiriting</string>
     <string name="parolni_qayta_kirting">Parolni qayta kirting</string>
     <string name="men_offerta_shartlariga_roziman">Men offerta shartlariga roziman</string>
+    <string name="tarix">Tarix</string>
+    <string name="bosh_sahifa">Bosh sahifa</string>
+    <string name="tarif">Tarif</string>
+    <string name="aloqa">Aloqa</string>
 </resources>

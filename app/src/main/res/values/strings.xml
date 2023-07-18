@@ -14,4 +14,14 @@
     <string name="ismingizni_kiriting">Ismingizni kiriting</string>
     <string name="parolni_qayta_kirting">Parolni qayta kirting</string>
     <string name="men_offerta_shartlariga_roziman">Men offerta shartlariga roziman</string>
+    <string name="title_activity_admin_main">AdminMainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="tarix">Tarix</string>
+    <string name="bosh_sahifa">Bosh sahifa</string>
+    <string name="tarif">Tarif</string>
+    <string name="aloqa">Aloqa</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

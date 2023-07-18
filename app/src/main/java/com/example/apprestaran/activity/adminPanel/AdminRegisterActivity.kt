@@ -1,5 +1,6 @@
 package com.example.apprestaran.activity.adminPanel
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
@@ -13,6 +14,9 @@ class AdminRegisterActivity : AppCompatActivity() {
         window.setStatusBarColor(ContextCompat.getColor(this,R.color.statusbar));
         binding = ActivityAdminRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.btnNext1.setOnClickListener {
+            Intent(this@AdminRegisterActivity,AdminMainActivity::class.java)
+        }
 
     }
 }

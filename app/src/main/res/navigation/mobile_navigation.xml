@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+
+    <fragment
+        android:id="@+id/navigation_contact"
+        android:name="com.example.apprestaran.activity.adminPanel.ui.contact.ContactFragment"
+
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/navigation_calendar"
+        android:name="com.example.apprestaran.activity.adminPanel.ui.calendar.CalendarFragment"
+
+        tools:layout="@layout/fragment_calendar" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.apprestaran.activity.adminPanel.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_worker"
+        android:name="com.example.apprestaran.activity.adminPanel.ui.worker.WorkerFragment"
+        android:label="fragment_worker"
+        tools:layout="@layout/fragment_worker" />
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.example.apprestaran.activity.adminPanel.ui.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+
+
+</navigation>

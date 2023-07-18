@@ -3,7 +3,7 @@
     <style name="Base.Theme.AppRestaran" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="statusBarBackground">#abaeb5</item>
+        <item name="android:statusBarColor">@color/statusbar</item>
     </style>
 
     <style name="Theme.AppRestaran" parent="Base.Theme.AppRestaran" />
