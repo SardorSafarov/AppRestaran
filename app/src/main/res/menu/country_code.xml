@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/uz"
+        android:title="+998"
+        android:icon="@drawable/flag_uz"
+        >
+    </item>
+    <item
+        android:id="@+id/ru"
+        android:title="+7"
+        android:icon="@drawable/flag_ru"
+        >
+    </item>
+    <item
+        android:id="@+id/turkiya"
+        android:title="+1"
+        android:icon="@drawable/flag_turkiya"
+        >
+    </item>
+    <item
+        android:id="@+id/azarbayjan"
+        android:title="+7"
+        android:icon="@drawable/flag_azarbayjan"
+        >
+    </item>
+</menu>

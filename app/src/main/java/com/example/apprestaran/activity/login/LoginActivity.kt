@@ -1,21 +1,22 @@
 package com.example.apprestaran.activity.login
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.text.InputType
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.transition.AutoTransition
 import android.transition.TransitionManager
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.view.menu.MenuBuilder
+import androidx.appcompat.view.menu.MenuPopupHelper
 import androidx.core.content.ContextCompat
 import com.example.apprestaran.R
 import com.example.apprestaran.activity.adminPanel.AdminRegisterActivity
 import com.example.apprestaran.databinding.ActivityLoginBinding
-import com.example.apprestaran.need.d
 
 
 class LoginActivity : AppCompatActivity() {
@@ -33,15 +34,65 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun btnClickListener() {
+
+        cardView()
+        passwordShowNotShow()
+        openCountryCode()
+    }
+
+
+    @SuppressLint("RestrictedApi")
+    private fun openCountryCode() {
         binding.apply {
-            cardView()
+            btnCountryCode.setOnClickListener {
+                var it = it as View
+                val menuBuilder = MenuBuilder(this@LoginActivity)
+                val inflater = MenuInflater(this@LoginActivity)
+                inflater.inflate(R.menu.country_code, menuBuilder)
+
+                val optionsMenu = MenuPopupHelper(this@LoginActivity, menuBuilder, it)
+                optionsMenu.setForceShowIcon(true)
+                menuBuilder.setCallback(object : MenuBuilder.Callback {
+                    override fun onMenuItemSelected(menu: MenuBuilder, item: MenuItem): Boolean {
+                        when (item.itemId) {
+                            R.id.uz -> {
+                            imgCountryFlag.setImageResource(R.drawable.flag_uz)
+                                textCountryCode.text = item.title
+                            }
+                            R.id.ru -> {
+                                imgCountryFlag.setImageResource(R.drawable.flag_ru)
+                                textCountryCode.text = item.title
+                            }
+                            R.id.turkiya -> {
+                                imgCountryFlag.setImageResource(R.drawable.flag_turkiya)
+                                textCountryCode.text = item.title
+                            }
+                            R.id.azarbayjan -> {
+                                imgCountryFlag.setImageResource(R.drawable.flag_azarbayjan)
+                                textCountryCode.text = item.title
+                            }
+
+                            else -> false
+                        }
+                        return true
+                    }
+
+                    override fun onMenuModeChange(menu: MenuBuilder) {}
+                })
+                optionsMenu.show()
+            }
+
+        }
+    }
+
+    private fun passwordShowNotShow() {
+        binding.apply {
             btnPasswordShow.setOnClickListener {
 
                 if (passwordAdmin) {
                     edtPasswordAdmin.setTransformationMethod(HideReturnsTransformationMethod.getInstance())
                     imgEye.setImageResource(R.drawable.baseline_visibility_on)
-                }
-                else {
+                } else {
                     edtPasswordAdmin.setTransformationMethod(PasswordTransformationMethod.getInstance())
 
                     imgEye.setImageResource(R.drawable.baseline_visibility_off_24)
@@ -50,8 +101,6 @@ class LoginActivity : AppCompatActivity() {
 
             }
         }
-
-
     }
 
     private fun cardView() {
