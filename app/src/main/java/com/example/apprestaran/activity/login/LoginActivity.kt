@@ -1,15 +1,18 @@
 package com.example.apprestaran.activity.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.transition.AutoTransition
+import android.transition.TransitionManager
 import android.view.View
-import android.widget.LinearLayout
-import androidx.appcompat.widget.LinearLayoutCompat
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.apprestaran.R
 import com.example.apprestaran.activity.adminPanel.AdminRegisterActivity
 import com.example.apprestaran.databinding.ActivityLoginBinding
+
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
@@ -28,22 +31,26 @@ class LoginActivity : AppCompatActivity() {
         binding.apply {
             btnLinear1.setOnClickListener {
                 if (linear1) {
+                    TransitionManager.beginDelayedTransition(btnLinear1, AutoTransition())
                     line1.visibility = View.VISIBLE
-                    line2.visibility = View.GONE
+
+
                 }else{
                     line1.visibility = View.GONE
+                    TransitionManager.beginDelayedTransition(btnLinear1, AutoTransition())
                 }
-                txt1.text = if(linear1) "-" else "+"
+                img1.rotation = if(linear1) 90f else -90f
                 linear1 = !linear1
             }
             btnLinear2.setOnClickListener {
                 if (linear2) {
+                    TransitionManager.beginDelayedTransition(btnLinear2, AutoTransition())
                     line2.visibility = View.VISIBLE
-                    line1.visibility = View.GONE
                 }else{
                     line2.visibility = View.GONE
+                    TransitionManager.beginDelayedTransition(btnLinear2, AutoTransition())
                 }
-                txt2.text = if(linear2) "-" else "+"
+                img2.rotation = if(linear2) 90f else -90f
                 linear2 = !linear2
             }
 

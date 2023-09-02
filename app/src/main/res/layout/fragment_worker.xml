@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".activity.adminPanel.ui.worker.WorkerFragment">
 
 
@@ -44,6 +46,62 @@
             android:gravity="center" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="@dimen/padding_margin_20dp"
+        android:paddingHorizontal="15dp">
+
+        <com.google.android.material.button.MaterialButton
+            app:backgroundTint="#e4e9ed"
+            android:background="@drawable/bg_contact_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:elevation="@dimen/padding_margin_20dp" />
+
+        <View
+            android:layout_width="@dimen/padding_margin_20dp"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.button.MaterialButton
+            app:backgroundTint="#e4e9ed"
+            android:background="@drawable/bg_liner_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:elevation="@dimen/padding_margin_20dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:paddingHorizontal="15dp">
+
+        <com.google.android.material.button.MaterialButton
+            app:backgroundTint="#e4e9ed"
+            android:background="@drawable/bg_liner_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:elevation="@dimen/padding_margin_20dp" />
+
+        <View
+            android:layout_width="@dimen/padding_margin_20dp"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.button.MaterialButton
+            app:backgroundTint="#e4e9ed"
+            android:background="@drawable/bg_liner_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:elevation="@dimen/padding_margin_20dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

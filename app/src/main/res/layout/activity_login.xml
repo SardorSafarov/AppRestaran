@@ -21,12 +21,13 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_margin_30dp"
             android:text="@string/tizimga_kirish"
-            android:textColor="#585858"
-            android:textSize="@dimen/txt_40sp"
+            android:textColor="#000000"
+            android:textSize="@dimen/_32sp"
             android:textStyle="bold" />
 
 
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/btn_linear1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_margin_30dp"
@@ -36,7 +37,6 @@
             android:padding="15dp">
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/btn_linear1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -49,11 +49,12 @@
                     android:textSize="@dimen/txt_24sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/txt1"
+                <ImageView
+                    android:id="@+id/img1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+"
+                    android:src="@drawable/baseline_chevron_left_24"
+                    android:rotation="-90"
                     android:textColor="@color/black"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -123,6 +124,7 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/btn_linear2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/padding_margin_30dp"
@@ -133,7 +135,7 @@
             android:padding="15dp">
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/btn_linear2"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -146,11 +148,12 @@
                     android:textSize="@dimen/txt_24sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/txt2"
+                <ImageView
+                    android:id="@+id/img2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+"
+                    android:src="@drawable/baseline_chevron_left_24"
+                    android:rotation="-90"
                     android:textColor="@color/black"
                     android:textSize="30sp"
                     android:textStyle="bold" />

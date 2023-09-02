@@ -16,11 +16,7 @@
             android:name=".activity.adminPanel.AdminMainActivity"
             android:exported="true"
            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activity.adminPanel.AdminRegisterActivity"
@@ -35,6 +31,11 @@
         <activity
             android:name=".activity.splashScren.SplashScreenActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity
