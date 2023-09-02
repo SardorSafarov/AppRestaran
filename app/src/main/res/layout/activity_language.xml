@@ -52,14 +52,15 @@
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:drawableEnd="@drawable/flag_ru"
-            android:drawablePadding="@dimen/padding_margin_30dp"
+            android:elevation="@dimen/padding_margin_30dp"
             android:lines="1"
             android:paddingVertical="14dp"
-            android:text="Русски"
+            android:text="Pyccки"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:backgroundTint="@color/white"
-            app:cornerRadius="@dimen/padding_margin_18dp" />
+            app:cornerRadius="@dimen/padding_margin_18dp"
+            app:elevation="@dimen/padding_margin_20dp" />
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton

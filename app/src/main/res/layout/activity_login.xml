@@ -33,12 +33,12 @@
             android:layout_margin="@dimen/padding_margin_30dp"
             android:background="@drawable/bg_liner_layout"
             android:elevation="10dp"
-            android:orientation="vertical"
-            android:padding="15dp">
+            android:orientation="vertical">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -53,12 +53,13 @@
                     android:id="@+id/img1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_chevron_left_24"
                     android:rotation="-90"
+                    android:src="@drawable/baseline_chevron_left_24"
                     android:textColor="@color/black"
                     android:textSize="30sp"
                     android:textStyle="bold" />
             </androidx.appcompat.widget.LinearLayoutCompat>
+
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/line1"
@@ -67,41 +68,106 @@
                 android:layout_marginVertical="10dp"
                 android:orientation="vertical"
                 android:paddingVertical="@dimen/radius_10dp"
-                android:visibility="gone">
+                android:visibility="visible">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginStart="@dimen/_15dp"
+                    android:text="Telefon raqamini kiriting"
+                    android:textColor="#000000"
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/tel_number">
+                    android:layout_marginHorizontal="@dimen/_15dp"
+                    android:background="@drawable/bg_liner_layout"
+                    android:elevation="10dp">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_phone"
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_country_code"
+                        android:gravity="center"
+                        android:padding="@dimen/_16dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/flag_uz" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="+998"
+                            android:textColor="@color/black" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:inputType="phone" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:background="@android:color/transparent"
+                        android:hint="0000"
+                        android:inputType="phone"
+                        android:paddingStart="@dimen/radius_10dp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:layout_marginStart="@dimen/_15dp"
+                    android:text="Parolni kiriting"
+                    android:textColor="#000000"
+
+                    />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="@dimen/padding_margin_20dp"
-                    android:hint="@string/parol"
-                    app:passwordToggleEnabled="true">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_password1"
+                    android:layout_marginHorizontal="@dimen/_15dp"
+                    android:background="@drawable/bg_liner_layout"
+                    android:elevation="10dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/btn_password_show"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_country_code"
+                        android:gravity="center"
+                        android:padding="@dimen/_16dp">
+
+                        <ImageView
+                            android:id="@+id/img_eye"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/baseline_visibility_off_24" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <EditText
+                        android:id="@+id/edt_password_admin"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:inputType="textPassword" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:background="@android:color/transparent"
+                        android:hint="*******"
+                        android:inputType="textPassword"
+                        android:paddingStart="@dimen/radius_10dp"
+                       />
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_next1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15dp"
+                    android:layout_marginTop="@dimen/_15dp"
                     android:background="@drawable/bg_btn_next"
                     android:elevation="0dp"
                     android:text="@string/kirish"
@@ -115,8 +181,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_marginTop="@dimen/radius_10dp"
+                    android:layout_marginEnd="@dimen/_15dp"
                     android:text="@string/ro_yxatdan_o_tish"
-                    android:textColor="@color/black" />
+                    android:textColor="#90bad9" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -152,8 +219,8 @@
                     android:id="@+id/img2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_chevron_left_24"
                     android:rotation="-90"
+                    android:src="@drawable/baseline_chevron_left_24"
                     android:textColor="@color/black"
                     android:textSize="30sp"
                     android:textStyle="bold" />

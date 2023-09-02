@@ -9,7 +9,7 @@
     <string name="tel_number">Tel number</string>
     <string name="parol">Parol</string>
     <string name="kirish">Kirish</string>
-    <string name="ro_yxatdan_o_tish">Ro\'yxatdan o`tish</string>
+    <string name="ro_yxatdan_o_tish"><u>Ro\'yxatdan o`tish</u></string>
     <string name="login">Login</string>
     <string name="restoran_nomi">Restoran nomi</string>
     <string name="ismingizni_kiriting">Ismingizni kiriting</string>

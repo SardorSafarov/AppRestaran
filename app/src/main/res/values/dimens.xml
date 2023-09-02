@@ -14,4 +14,8 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="txt_16sp">16sp</dimen>
     <dimen name="_32sp">32sp</dimen>
+    <dimen name="_18sp">18sp</dimen>
+    <dimen name="_40dp">40dp</dimen>
+    <dimen name="_15dp">15dp</dimen>
+    <dimen name="_16dp">16dp</dimen>
 </resources>
