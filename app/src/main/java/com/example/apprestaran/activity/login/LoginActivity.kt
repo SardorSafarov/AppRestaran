@@ -3,6 +3,8 @@ package com.example.apprestaran.activity.login
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.transition.AutoTransition
@@ -17,6 +19,7 @@ import androidx.core.content.ContextCompat
 import com.example.apprestaran.R
 import com.example.apprestaran.activity.adminPanel.AdminRegisterActivity
 import com.example.apprestaran.databinding.ActivityLoginBinding
+import com.example.apprestaran.need.d
 
 
 class LoginActivity : AppCompatActivity() {
@@ -24,13 +27,14 @@ class LoginActivity : AppCompatActivity() {
     private var linear1 = true
     private var linear2 = true
     private var passwordAdmin = true
+    private var isFormatting = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.statusbar));
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         btnClickListener()
-
+        edtPhoneNumberFormar("uz")
     }
 
     private fun btnClickListener() {
@@ -56,17 +60,21 @@ class LoginActivity : AppCompatActivity() {
                     override fun onMenuItemSelected(menu: MenuBuilder, item: MenuItem): Boolean {
                         when (item.itemId) {
                             R.id.uz -> {
-                            imgCountryFlag.setImageResource(R.drawable.flag_uz)
+                                imgCountryFlag.setImageResource(R.drawable.flag_uz)
                                 textCountryCode.text = item.title
+                                edtPhoneNumberFormar("uz")
                             }
+
                             R.id.ru -> {
                                 imgCountryFlag.setImageResource(R.drawable.flag_ru)
                                 textCountryCode.text = item.title
                             }
+
                             R.id.turkiya -> {
                                 imgCountryFlag.setImageResource(R.drawable.flag_turkiya)
                                 textCountryCode.text = item.title
                             }
+
                             R.id.azarbayjan -> {
                                 imgCountryFlag.setImageResource(R.drawable.flag_azarbayjan)
                                 textCountryCode.text = item.title
@@ -83,6 +91,63 @@ class LoginActivity : AppCompatActivity() {
             }
 
         }
+    }
+
+    private fun edtPhoneNumberFormar(s: String) {
+
+        when (s) {
+            "uz" -> {
+                binding.edtPhoneNumber.hint = "000 00 00"
+                binding.edtPhoneNumber.addTextChangedListener(object : TextWatcher {
+                    override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                    }
+
+                    override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+                    }
+
+                    override fun afterTextChanged(p0: Editable?) {
+
+                        if (isFormatting) {
+                            return
+                        }
+                        isFormatting = true
+                        var text = p0.toString()
+
+                        // Raqam va probelni o'chirish
+                        if (text.length != 8) {
+                            // Raqam va probelni o'chirish
+                            text = text.replace("[^\\d]".toRegex(), "")
+                            // Formatni qayta yaratish (+998 99 123 45 67)
+
+                            // Formatni qayta yaratish (+998 99 123 45 67)
+                            val formattedNumber = StringBuilder()
+                            val length = text.length
+                            d(length.toString())
+                            for (i in 0 until length) {
+                                val c = text[i]
+                                if (i == 2 || i == 5 || i == 7) {
+                                    formattedNumber.append(" ")
+                                }
+                                formattedNumber.append(c)
+                            }
+                            // EditText ga yangi formatlangan telefon raqamini qo'yish
+                            // EditText ga yangi formatlangan telefon raqamini qo'yish
+                            binding.edtPhoneNumber.removeTextChangedListener(this)
+                            binding.edtPhoneNumber.setText(formattedNumber.toString())
+                            binding.edtPhoneNumber.setSelection(formattedNumber.length)
+                            binding.edtPhoneNumber.addTextChangedListener(this)
+
+                            isFormatting = false
+                        }else{
+                            return
+                        }
+                    }
+                })
+            }
+        }
+
+
     }
 
     private fun passwordShowNotShow() {
