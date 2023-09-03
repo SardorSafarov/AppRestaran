@@ -1,6 +1,7 @@
 package com.example.apprestaran.activity.login
 
 import android.annotation.SuppressLint
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -169,7 +170,9 @@ class LoginActivity : AppCompatActivity() {
             }
 
             btnRegister.setOnClickListener {
-                startActivity(Intent(this@LoginActivity, AdminRegisterActivity::class.java))
+                var i = Intent(this@LoginActivity, AdminRegisterActivity::class.java)
+                var anim = ActivityOptions.makeSceneTransitionAnimation(this@LoginActivity).toBundle()
+                startActivity(i,anim)
             }
         }
     }

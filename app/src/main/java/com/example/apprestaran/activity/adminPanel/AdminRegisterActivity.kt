@@ -3,11 +3,6 @@ package com.example.apprestaran.activity.adminPanel
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.InputFilter
-import android.text.TextWatcher
-import android.text.method.HideReturnsTransformationMethod
-import android.text.method.PasswordTransformationMethod
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
@@ -17,26 +12,32 @@ import androidx.appcompat.view.menu.MenuPopupHelper
 import androidx.core.content.ContextCompat
 import com.example.apprestaran.R
 import com.example.apprestaran.databinding.ActivityAdminRegisterBinding
+import com.example.apprestaran.localMemory.SharePereferenseHelper
 import com.example.apprestaran.mask.PhoneNumberTextWatcher
-import com.example.apprestaran.need.d
+import com.example.apprestaran.need.passwordShowOnOFF
 
 class AdminRegisterActivity : AppCompatActivity() {
     lateinit var binding: ActivityAdminRegisterBinding
-    var passwordAdmin1 = true
-    var passwordAdmin2 = true
+    lateinit var sharePereferenseHelper: SharePereferenseHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.statusbar))
         binding = ActivityAdminRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        sharePereferenseHelper = SharePereferenseHelper(this)
         btnSetOnClikListener()
         binding.edtPhoneNumber.addTextChangedListener(PhoneNumberTextWatcher(binding.edtPhoneNumber))
     }
 
+
+
     private fun btnSetOnClikListener() {
-        binding.btnNext1.setOnClickListener {
-            Intent(this@AdminRegisterActivity, AdminMainActivity::class.java)
+        binding.btnNext.setOnClickListener {
+            sharePereferenseHelper.setAdminName(binding.edtAdminName.text.toString())
+            sharePereferenseHelper.setRestaranName(binding.edtRestaranName.text.toString())
+            finish()
         }
+
         openCountryCode()
         passwordShowNotShow()
     }
@@ -113,31 +114,10 @@ class AdminRegisterActivity : AppCompatActivity() {
     private fun passwordShowNotShow() {
         binding.apply {
             btnPasswordShow1.setOnClickListener {
-
-                if (passwordAdmin1) {
-                    edtPassword1.setTransformationMethod(HideReturnsTransformationMethod.getInstance())
-                    imgEye1.setImageResource(R.drawable.baseline_visibility_on)
-                } else {
-                    edtPassword1.setTransformationMethod(PasswordTransformationMethod.getInstance())
-
-                    imgEye1.setImageResource(R.drawable.baseline_visibility_off_24)
-                }
-                binding.edtPassword1.setSelection(binding.edtPassword1.length())
-                passwordAdmin1 = !passwordAdmin1
-
+                passwordShowOnOFF(this@AdminRegisterActivity,imgEye1,edtPassword1)
             }
             btnPasswordShow2.setOnClickListener {
-
-                if (passwordAdmin2) {
-                    edtPassword2.setTransformationMethod(HideReturnsTransformationMethod.getInstance())
-                    imgEye2.setImageResource(R.drawable.baseline_visibility_on)
-                } else {
-                    edtPassword2.setTransformationMethod(PasswordTransformationMethod.getInstance())
-
-                    imgEye2.setImageResource(R.drawable.baseline_visibility_off_24)
-                }
-                binding.edtPassword2.setSelection(binding.edtPassword2.length())
-                passwordAdmin2 = !passwordAdmin2
+                passwordShowOnOFF(this@AdminRegisterActivity,imgEye2,edtPassword2)
 
             }
         }

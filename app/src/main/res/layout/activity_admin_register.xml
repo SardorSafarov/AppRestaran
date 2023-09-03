@@ -57,12 +57,12 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <EditText
-                android:id="@+id/edt_name"
+                android:id="@+id/edt_admin_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
                 android:hint="@string/ismingizni_kiriting"
-                android:inputType="phone"
+                android:inputType="textCapWords"
                 android:paddingStart="@dimen/radius_10dp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
         <TextView
@@ -99,12 +99,12 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <EditText
-
+                android:id="@+id/edt_restaran_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
                 android:hint="@string/restoran_nomi"
-                android:inputType="phone"
+                android:inputType="textCapSentences"
                 android:paddingStart="@dimen/radius_10dp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
         <TextView
@@ -254,7 +254,7 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_next1"
+            android:id="@+id/btn_next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_15dp"
