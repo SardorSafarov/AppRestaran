@@ -16,40 +16,80 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.appcompat.view.menu.MenuPopupHelper
+import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.content.ContextCompat
 import com.example.apprestaran.R
+import com.example.apprestaran.activity.adminPanel.AdminMainActivity
 import com.example.apprestaran.activity.adminPanel.AdminRegisterActivity
 import com.example.apprestaran.databinding.ActivityLoginBinding
 import com.example.apprestaran.mask.PhoneNumberTextWatcher
 import com.example.apprestaran.need.d
+import com.example.apprestaran.need.passwordShowOnOFF
+import com.example.apprestaran.need.tosat
+import com.example.apprestaran.need.visbleAndGone
 
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
-    private var linear1 = true
-    private var linear2 = true
-    private var passwordAdmin = true
+    private var linear11 = true
+    private var linear22 = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.statusbar));
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         btnClickListener()
-        binding.edtPhoneNumber.addTextChangedListener(
+        binding.edtAdminPhoneNumber.addTextChangedListener(
             PhoneNumberTextWatcher(
-                binding.edtPhoneNumber,
+                binding.edtAdminPhoneNumber,
                 "uz"
             )
         )
     }
 
     private fun btnClickListener() {
-
         cardView()
         passwordShowNotShow()
         openCountryCode()
     }
 
+    private fun cardView() {
+        binding.apply {
+            cardOpenClose()
+            btnAdminNext.setOnClickListener {
+                var validator = validationData()
+                if (validator == "ok") {
+                    var i = Intent(this@LoginActivity, AdminMainActivity::class.java)
+                    var anim = ActivityOptions.makeSceneTransitionAnimation(this@LoginActivity).toBundle()
+                    startActivity(i, anim)
+                } else {
+                    tosat(this@LoginActivity, message = validator)
+                }
+            }
+            btnAdminRegister.setOnClickListener {
+                var i = Intent(this@LoginActivity, AdminRegisterActivity::class.java)
+                var anim = ActivityOptions.makeSceneTransitionAnimation(this@LoginActivity).toBundle()
+                startActivity(i, anim)
+            }
+
+        }
+    }
+
+    private fun cardOpenClose() {
+        binding.apply {
+            btnAdminLinear.setOnClickListener {
+                linear1.visbleAndGone()
+                img1.rotation = if (linear11) 90f else -90f
+                linear11 = !linear11
+            }
+            btnLinear2.setOnClickListener {
+                linear2.visbleAndGone()
+                img2.rotation = if (linear22) 90f else -90f
+                linear22 = !linear22
+            }
+        }
+    }
 
     @SuppressLint("RestrictedApi")
     private fun openCountryCode() {
@@ -68,12 +108,12 @@ class LoginActivity : AppCompatActivity() {
                             R.id.uz -> {
                                 imgCountryFlag.setImageResource(R.drawable.flag_uz)
                                 textCountryCode.text = item.title
-                                binding.edtPhoneNumber.hint = "00 000 00 00"
+                                binding.edtAdminPhoneNumber.hint = "00 000 00 00"
                                 binding.apply {
-                                    edtPhoneNumber.text.clear()
-                                    edtPhoneNumber.addTextChangedListener(
+                                    edtAdminPhoneNumber.text.clear()
+                                    edtAdminPhoneNumber.addTextChangedListener(
                                         PhoneNumberTextWatcher(
-                                            binding.edtPhoneNumber,
+                                            binding.edtAdminPhoneNumber,
                                             "uz"
                                         )
                                     )
@@ -85,12 +125,12 @@ class LoginActivity : AppCompatActivity() {
                             R.id.ru -> {
                                 imgCountryFlag.setImageResource(R.drawable.flag_ru)
                                 textCountryCode.text = item.title
-                                binding.edtPhoneNumber.hint = "000 000 0000"
+                                binding.edtAdminPhoneNumber.hint = "000 000 0000"
                                 binding.apply {
-                                    edtPhoneNumber.text.clear()
-                                    edtPhoneNumber.addTextChangedListener(
+                                    edtAdminPhoneNumber.text.clear()
+                                    edtAdminPhoneNumber.addTextChangedListener(
                                         PhoneNumberTextWatcher(
-                                            binding.edtPhoneNumber,
+                                            binding.edtAdminPhoneNumber,
                                             "ru"
                                         )
                                     )
@@ -125,55 +165,19 @@ class LoginActivity : AppCompatActivity() {
     private fun passwordShowNotShow() {
         binding.apply {
             btnPasswordShow.setOnClickListener {
-
-                if (passwordAdmin) {
-                    edtPasswordAdmin.setTransformationMethod(HideReturnsTransformationMethod.getInstance())
-                    imgEye.setImageResource(R.drawable.baseline_visibility_on)
-                } else {
-                    edtPasswordAdmin.setTransformationMethod(PasswordTransformationMethod.getInstance())
-
-                    imgEye.setImageResource(R.drawable.baseline_visibility_off_24)
-                }
-                binding.edtPasswordAdmin.setSelection(binding.edtPasswordAdmin.length())
-                passwordAdmin = !passwordAdmin
-
+                passwordShowOnOFF(this@LoginActivity, imgEye, edtAdminPassword)
             }
         }
     }
 
-    private fun cardView() {
+
+    private fun validationData(): String {
         binding.apply {
-            btnLinear1.setOnClickListener {
-                if (linear1) {
-                    TransitionManager.beginDelayedTransition(btnLinear1, AutoTransition())
-                    line1.visibility = View.VISIBLE
-
-
-                } else {
-                    line1.visibility = View.GONE
-                    TransitionManager.beginDelayedTransition(btnLinear1, AutoTransition())
-                }
-
-                img1.rotation = if (linear1) 90f else -90f
-                linear1 = !linear1
-            }
-            btnLinear2.setOnClickListener {
-                if (linear2) {
-                    TransitionManager.beginDelayedTransition(btnLinear2, AutoTransition())
-                    line2.visibility = View.VISIBLE
-                } else {
-                    line2.visibility = View.GONE
-                    TransitionManager.beginDelayedTransition(btnLinear2, AutoTransition())
-                }
-                img2.rotation = if (linear2) 90f else -90f
-                linear2 = !linear2
-            }
-
-            btnRegister.setOnClickListener {
-                var i = Intent(this@LoginActivity, AdminRegisterActivity::class.java)
-                var anim = ActivityOptions.makeSceneTransitionAnimation(this@LoginActivity).toBundle()
-                startActivity(i,anim)
-            }
+            if (edtAdminPhoneNumber.text.length!=edtAdminPhoneNumber.hint.length)
+                return getString(R.string.telefon_nomerni_to_liq_kiriting)
+            if (edtAdminPassword.text!!.isEmpty())
+                return getString(R.string.parolni_kiriting)
         }
+        return "ok"
     }
 }

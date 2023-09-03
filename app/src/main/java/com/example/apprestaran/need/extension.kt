@@ -3,9 +3,15 @@ package com.example.apprestaran.need
 import android.content.Context
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
+import android.transition.AutoTransition
+import android.transition.TransitionManager
 import android.util.Log
+import android.view.View
+import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
+import androidx.appcompat.widget.LinearLayoutCompat
 import com.example.apprestaran.R
 
 fun d(message:String){
@@ -24,4 +30,21 @@ fun passwordShowOnOFF(context:Context,imageView: ImageView,edtPassword:EditText)
         imageView.setImageResource(R.drawable.baseline_visibility_on)
     }
     edtPassword.setSelection(edtPassword.length())
+}
+
+
+
+fun tosat(context: Context,message: String){
+    Toast.makeText(context, "$message", Toast.LENGTH_SHORT).show()
+}
+
+fun View.visbleAndGone():View{
+    if (visibility==View.GONE){
+        TransitionManager.beginDelayedTransition(this as ViewGroup, AutoTransition())
+        visibility = View.VISIBLE
+    }else{
+        visibility = View.GONE
+        TransitionManager.beginDelayedTransition(this as ViewGroup, AutoTransition())
+    }
+    return this
 }

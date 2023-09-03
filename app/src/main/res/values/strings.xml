@@ -26,4 +26,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tarix_bo_lmi">Tarix bo\'lmi</string>
     <string name="password_hiden">*******</string>
+    <string name="telefon_nomerni_to_liq_kiriting">Telefon nomerni to\'liq kiriting</string>
+    <string name="parolni_kiriting">Parolni kiriting</string>
 </resources>
