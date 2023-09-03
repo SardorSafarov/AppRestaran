@@ -19,6 +19,7 @@ import androidx.core.content.ContextCompat
 import com.example.apprestaran.R
 import com.example.apprestaran.activity.adminPanel.AdminRegisterActivity
 import com.example.apprestaran.databinding.ActivityLoginBinding
+import com.example.apprestaran.mask.PhoneNumberTextWatcher
 import com.example.apprestaran.need.d
 
 
@@ -27,14 +28,18 @@ class LoginActivity : AppCompatActivity() {
     private var linear1 = true
     private var linear2 = true
     private var passwordAdmin = true
-    private var isFormatting = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.statusbar));
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         btnClickListener()
-        edtPhoneNumberFormar("uz")
+        binding.edtPhoneNumber.addTextChangedListener(
+            PhoneNumberTextWatcher(
+                binding.edtPhoneNumber,
+                "uz"
+            )
+        )
     }
 
     private fun btnClickListener() {
@@ -62,13 +67,34 @@ class LoginActivity : AppCompatActivity() {
                             R.id.uz -> {
                                 imgCountryFlag.setImageResource(R.drawable.flag_uz)
                                 textCountryCode.text = item.title
-                                edtPhoneNumberFormar("uz")
+                                binding.edtPhoneNumber.hint = "00 000 00 00"
+                                binding.apply {
+                                    edtPhoneNumber.text.clear()
+                                    edtPhoneNumber.addTextChangedListener(
+                                        PhoneNumberTextWatcher(
+                                            binding.edtPhoneNumber,
+                                            "uz"
+                                        )
+                                    )
+
+                                }
+
                             }
 
                             R.id.ru -> {
                                 imgCountryFlag.setImageResource(R.drawable.flag_ru)
                                 textCountryCode.text = item.title
-                                edtPhoneNumberFormar("ru")
+                                binding.edtPhoneNumber.hint = "000 000 0000"
+                                binding.apply {
+                                    edtPhoneNumber.text.clear()
+                                    edtPhoneNumber.addTextChangedListener(
+                                        PhoneNumberTextWatcher(
+                                            binding.edtPhoneNumber,
+                                            "ru"
+                                        )
+                                    )
+
+                                }
                             }
 
                             R.id.turkiya -> {
@@ -94,107 +120,6 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun edtPhoneNumberFormar(s: String) {
-
-        when (s) {
-            "uz" -> {
-                binding.edtPhoneNumber.hint = "00 000 00 00"
-                binding.edtPhoneNumber.addTextChangedListener(object : TextWatcher {
-                    override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                    }
-
-                    override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-                    }
-
-                    override fun afterTextChanged(p0: Editable?) {
-
-                        if (isFormatting) {
-                            return
-                        }
-                        isFormatting = true
-                        var text = p0.toString()
-
-                        // Raqam va probelni o'chirish
-                        if (text.length != 8) {
-                            // Raqam va probelni o'chirish
-                            text = text.replace("[^\\d]".toRegex(), "")
-                            // Formatni qayta yaratish (+998 99 123 45 67)
-
-                            // Formatni qayta yaratish (+998 99 123 45 67)
-                            val formattedNumber = StringBuilder()
-                            val length = text.length
-                            d(length.toString())
-                            for (i in 0 until length) {
-                                val c = text[i]
-                                if (i == 2 || i == 5 || i == 7) {
-                                    formattedNumber.append(" ")
-                                }
-                                formattedNumber.append(c)
-                            }
-                            // EditText ga yangi formatlangan telefon raqamini qo'yish
-                            // EditText ga yangi formatlangan telefon raqamini qo'yish
-                            binding.edtPhoneNumber.removeTextChangedListener(this)
-                            binding.edtPhoneNumber.setText(formattedNumber.toString())
-                            binding.edtPhoneNumber.setSelection(formattedNumber.length)
-                            binding.edtPhoneNumber.addTextChangedListener(this)
-
-                            isFormatting = false
-                        }else{
-                            return
-                        }
-                    }
-                })
-            }
-            "ru" -> {
-                binding.edtPhoneNumber.hint = "000 000 0000"
-                binding.edtPhoneNumber.addTextChangedListener(object : TextWatcher {
-                    override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                    }
-
-                    override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-                    }
-
-                    override fun afterTextChanged(p0: Editable?) {
-
-                        if (isFormatting) {
-                            return
-                        }
-                        isFormatting = true
-                        var text = p0.toString()
-
-                        // Raqam va probelni o'chirish
-
-                            // Raqam va probelni o'chirish
-                            text = text.replace("[^\\d]".toRegex(), "")
-                            // Formatni qayta yaratish (+998 99 123 45 67)
-
-                            // Formatni qayta yaratish (+998 99 123 45 67)
-                            val formattedNumber = StringBuilder()
-                            val length = text.length
-                            d(length.toString())
-                            for (i in 0 until length) {
-                                val c = text[i]
-                                if (i == 3 || i == 5 || i == 8) {
-                                    formattedNumber.append(" ")
-                                }
-                                formattedNumber.append(c)
-                            }
-                            // EditText ga yangi formatlangan telefon raqamini qo'yish
-                            // EditText ga yangi formatlangan telefon raqamini qo'yish
-                            binding.edtPhoneNumber.removeTextChangedListener(this)
-                            binding.edtPhoneNumber.setText(formattedNumber.toString())
-                            binding.edtPhoneNumber.setSelection(formattedNumber.length)
-                            binding.edtPhoneNumber.addTextChangedListener(this)
-                            isFormatting = false
-                    }
-                })
-            }
-        }
-
-
-    }
 
     private fun passwordShowNotShow() {
         binding.apply {

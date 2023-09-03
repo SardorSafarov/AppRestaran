@@ -116,7 +116,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:hint="0000"
+                        android:hint="00 000 00 00"
                         android:inputType="phone"
                         android:paddingStart="@dimen/radius_10dp" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -185,7 +185,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:layout_marginTop="@dimen/radius_10dp"
+                    android:layout_marginTop="@dimen/padding_margin_20dp"
                     android:layout_marginEnd="@dimen/_15dp"
                     android:text="@string/ro_yxatdan_o_tish"
                     android:textColor="#90bad9" />
