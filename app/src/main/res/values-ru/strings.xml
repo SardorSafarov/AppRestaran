@@ -42,4 +42,5 @@
     <string name="telefon_raqamini_kiriting">Введите номер телефона</string>
     <string name="pin_kodni_kiriting">Введите пин-код</string>
     <string name="chiqish_uchun_orqaga_tugmasini_bosing">Chiqish uchun «Orqaga» tugmasini bosing</string>
+    <string name="xush_kelibsiz">Xush kelibsiz</string>
 </resources>

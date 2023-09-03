@@ -12,7 +12,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/yellow"
+        android:background="@color/statusbar"
         android:gravity="center_vertical"
         android:paddingHorizontal="15dp">
 
@@ -27,15 +27,30 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
-
-        <TextView
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hush kelibsiz\nAbdulaziz"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="@dimen/txt_16sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/xush_kelibsiz"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_16sp"
+                />
+            <TextView
+                android:id="@+id/text_admin_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_16sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
 
         <View
             android:layout_width="0dp"

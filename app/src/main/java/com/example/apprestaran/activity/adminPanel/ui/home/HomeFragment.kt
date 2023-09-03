@@ -5,7 +5,7 @@ import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
     override fun onViewCreate() {
-
+        binding.textAdminName.text = sharePereferenseHelper.getAdminName()
     }
 
 
