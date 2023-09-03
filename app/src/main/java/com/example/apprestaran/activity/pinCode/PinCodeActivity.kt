@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import com.example.apprestaran.R
@@ -104,6 +105,9 @@ class PinCodeActivity : AppCompatActivity() {
             if (it.text.isEmpty()) {
                 it.text = btn.text.toString()
                 it.visible()
+                var a = AnimationUtils.loadAnimation(this,R.anim.anim_pin_code_text)
+                a.duration = 100
+                it.animation= a
                 repetatPinCodeGo()
                 binding.btnClear.visible()
                 return
