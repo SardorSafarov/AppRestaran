@@ -49,4 +49,17 @@ fun View.visbleAndGone():View{
     return this
 }
 
+fun View.visible():View{
+    this.visibility = View.VISIBLE
+    return this
+}
 
+fun View.invisible():View{
+    this.visibility = View.INVISIBLE
+    return this
+}
+
+fun View.gone():View{
+    this.visibility = View.GONE
+    return this
+}

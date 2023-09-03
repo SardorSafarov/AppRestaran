@@ -25,61 +25,96 @@
         android:textColor="#000000"
         android:textSize="@dimen/txt_24sp" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_margin_30dp"
-        android:gravity="center">
+        android:layout_marginTop="@dimen/padding_margin_30dp">
 
-        <TextView
+        <ImageView
+            android:id="@+id/btn_pin_code_show_on_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:src="@drawable/baseline_visibility_off_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayoutCompat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginVertical="15dp"
-            android:background="@drawable/bg_pin_code_text"
-            android:elevation="@dimen/radius_10dp"
-            android:stateListAnimator="@null"
-            android:text=""
-            android:textSize="@dimen/txt_22sp"
-            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_pin_code_show_on_off"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_pin_code_show_on_off">
 
-            />
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_pin_code_text_off"
+                android:elevation="@dimen/radius_10dp"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:textColor="#8d9396"
+                android:visibility="gone"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold"
 
-        <TextView
-            android:gravity="center"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="@dimen/padding_margin_20dp"
-            android:background="@drawable/bg_pin_code_text"
-            android:elevation="@dimen/radius_10dp"
-            android:stateListAnimator="@null"
-            android:text=""
-            android:textSize="@dimen/txt_22sp"
-            android:textStyle="bold" />
-        <TextView
-            android:gravity="center"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginHorizontal="@dimen/padding_margin_20dp"
-            android:background="@drawable/bg_pin_code_text"
-            android:elevation="@dimen/radius_10dp"
-            android:stateListAnimator="@null"
-            android:text=""
-            android:textSize="@dimen/txt_22sp"
-            android:textStyle="bold" />
+                />
 
-        <TextView
-            android:gravity="center"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@drawable/bg_pin_code_text"
-            android:elevation="@dimen/radius_10dp"
-            android:stateListAnimator="@null"
-            android:text=""
-            android:textSize="@dimen/txt_22sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="@dimen/padding_margin_20dp"
+                android:background="@drawable/bg_pin_code_text_off"
+                android:elevation="@dimen/radius_10dp"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text=""
+                android:textColor="#8d9396"
+                android:visibility="gone"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="@dimen/padding_margin_20dp"
+                android:background="@drawable/bg_pin_code_text_off"
+                android:elevation="@dimen/radius_10dp"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text=""
+                android:textColor="#8d9396"
+                android:textSize="@dimen/_14sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_pin_code_text_off"
+                android:elevation="@dimen/radius_10dp"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="#8d9396"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -219,9 +254,9 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/padding_margin_30dp"
+        >
 
         <androidx.appcompat.widget.AppCompatButton
 
