@@ -6,7 +6,7 @@
     <string name="tizimga_kirish">Tizimga kirish</string>
     <string name="bosh_admin">Bosh admin</string>
     <string name="xodim">Xodim</string>
-    <string name="tel_number">Tel number</string>
+    <string name="tel_number">Telefon raqamingizni kiriting</string>
     <string name="parol">Parol</string>
     <string name="kirish">Kirish</string>
     <string name="ro_yxatdan_o_tish"><u>Ro\'yxatdan o`tish</u></string>
@@ -35,4 +35,8 @@
     <string name="parolni_bir_xil_emas">Parolni bir xil emas</string>
     <string name="ro_yxatdan_o_tish_1">Ro\'yxatdan o\'tish</string>
     <string name="parolda_kamida_4_ta_belgi_bo_lsin">Parolda kamida 4 ta belgi bo\'lsin</string>
+    <string name="pin_kodni_takrorlang">Pin kodni takrorlang</string>
+    <string name="_4_xonali_pin_kod_yarating">4 xonali pin kod yarating</string>
+    <string name="yangi_pin_kod_kiriting">Yangi pin kod kiriting</string>
+    <string name="kiritilgan_ma_lumot_mos_kelmaydi">Kiritilgan ma\'lumot mos kelmaydi</string>
 </resources>

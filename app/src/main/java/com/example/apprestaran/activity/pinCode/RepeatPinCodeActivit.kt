@@ -8,21 +8,27 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import com.example.apprestaran.R
-import com.example.apprestaran.activity.adminPanel.AdminRegisterActivity
-import com.example.apprestaran.databinding.ActivityPinCodeBinding
+import com.example.apprestaran.activity.adminPanel.AdminMainActivity
+import com.example.apprestaran.databinding.ActivityRepeatPinCodeActivitBinding
+import com.example.apprestaran.localMemory.SharePereferenseHelper
 import com.example.apprestaran.need.gone
 import com.example.apprestaran.need.invisible
+import com.example.apprestaran.need.tosat
 import com.example.apprestaran.need.visible
 
-class PinCodeActivity : AppCompatActivity() {
-    lateinit var binding: ActivityPinCodeBinding
+class RepeatPinCodeActivit : AppCompatActivity() {
+    lateinit var binding:ActivityRepeatPinCodeActivitBinding
     lateinit var textViewList: MutableList<TextView>
+    lateinit var pinCode:String
+    lateinit var sharePereferenseHelper: SharePereferenseHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityPinCodeBinding.inflate(layoutInflater)
+        binding = ActivityRepeatPinCodeActivitBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        pinCode = intent.getStringExtra("pincode")!!
         btnClickListener()
         checkAndRemovePinCode()
+        sharePereferenseHelper = SharePereferenseHelper(this)
     }
     private fun btnClickListener() {
         binding.apply {
@@ -69,15 +75,15 @@ class PinCodeActivity : AppCompatActivity() {
     }
 
     private fun pinCodeTextShowOnOff(baselineVisibilityOff24: Int) {
-            if (baselineVisibilityOff24 ==R.drawable.baseline_visibility_off_24){
-                textViewList.forEach {
-                    it.setBackgroundResource(R.drawable.bg_pin_code_text_off)
-                }
-            }else{
-                textViewList.forEach {
-                    it.setBackgroundResource(R.drawable.bg_pin_code_text_on)
-                }
+        if (baselineVisibilityOff24 ==R.drawable.baseline_visibility_off_24){
+            textViewList.forEach {
+                it.setBackgroundResource(R.drawable.bg_pin_code_text_off)
             }
+        }else{
+            textViewList.forEach {
+                it.setBackgroundResource(R.drawable.bg_pin_code_text_on)
+            }
+        }
     }
 
     private fun checkAndRemovePinCode() {
@@ -112,16 +118,22 @@ class PinCodeActivity : AppCompatActivity() {
     }
 
     private fun repetatPinCodeGo() {
-        var pinCode = ""
+        var newPinCode = ""
         textViewList.forEach {
             if (it.text.isNotEmpty())
-                pinCode+=it.text.toString()
+                newPinCode+=it.text.toString()
         }
-        if (pinCode.length==4)
+        if (newPinCode.length==4)
         {
-            var i = Intent(this, RepeatPinCodeActivit::class.java)
-            i.putExtra("pincode",pinCode)
-            startActivity(i)
+            if (newPinCode==pinCode){
+                sharePereferenseHelper.setPinCode(pinCode)
+                var i = Intent(this, AdminMainActivity::class.java)
+                startActivity(i)
+            }
+            else{
+                tosat(this, getString(R.string.kiritilgan_ma_lumot_mos_kelmaydi))
+            }
+
         }
     }
 }

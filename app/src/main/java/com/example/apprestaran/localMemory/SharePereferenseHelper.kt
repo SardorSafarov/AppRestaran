@@ -42,13 +42,13 @@ class SharePereferenseHelper(private val context: Context) {
 //
 //    fun getAccessToken() = preferences.getString(ACCESS_TOKEN, "empty").toString()
 //
-//    fun setAccessLanguage(language: String) {
-//        editor = preferences.edit()
-//        editor.putString(LANGUAGE, language)
-//        editor.apply()
-//    }
-//
-//    fun getAccessLenguage() = preferences.getString(LANGUAGE, "uz").toString()
+    fun setAppLanguage(language: String) {
+        editor = preferences.edit()
+        editor.putString("language", language)
+        editor.apply()
+    }
+
+    fun getAppLanguage() = preferences.getString("language", "uz").toString()
 //
 //
 //
