@@ -21,6 +21,7 @@ import androidx.core.content.ContextCompat
 import com.example.apprestaran.R
 import com.example.apprestaran.activity.adminPanel.AdminMainActivity
 import com.example.apprestaran.activity.adminPanel.AdminRegisterActivity
+import com.example.apprestaran.activity.pinCode.PinCodeActivity
 import com.example.apprestaran.databinding.ActivityLoginBinding
 import com.example.apprestaran.mask.PhoneNumberTextWatcher
 import com.example.apprestaran.need.d
@@ -60,7 +61,7 @@ class LoginActivity : AppCompatActivity() {
             btnAdminNext.setOnClickListener {
                 var validator = validationData()
                 if (validator == "ok") {
-                    var i = Intent(this@LoginActivity, AdminMainActivity::class.java)
+                    var i = Intent(this@LoginActivity, PinCodeActivity::class.java)
                     var anim = ActivityOptions.makeSceneTransitionAnimation(this@LoginActivity).toBundle()
                     startActivity(i, anim)
                 } else {

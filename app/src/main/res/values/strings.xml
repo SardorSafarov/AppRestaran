@@ -40,4 +40,6 @@
     <string name="yangi_pin_kod_kiriting">Yangi pin kod kiriting</string>
     <string name="kiritilgan_ma_lumot_mos_kelmaydi">Kiritilgan ma\'lumot mos kelmaydi</string>
     <string name="telefon_raqamini_kiriting">Telefon raqamini kiriting</string>
+    <string name="pin_kodni_kiriting">Pin kodni kiriting</string>
+    <string name="chiqish_uchun_orqaga_tugmasini_bosing">Chiqish uchun «Orqaga» tugmasini bosing</string>
 </resources>

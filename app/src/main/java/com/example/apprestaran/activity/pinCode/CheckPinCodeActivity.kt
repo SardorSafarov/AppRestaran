@@ -1,6 +1,5 @@
 package com.example.apprestaran.activity.pinCode
 
-import android.app.ActivityOptions
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,26 +8,26 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import com.example.apprestaran.R
 import com.example.apprestaran.activity.adminPanel.AdminMainActivity
-import com.example.apprestaran.databinding.ActivityRepeatPinCodeActivitBinding
+import com.example.apprestaran.databinding.ActivityCheckPinCodeBinding
 import com.example.apprestaran.localMemory.SharePereferenseHelper
 import com.example.apprestaran.need.gone
 import com.example.apprestaran.need.invisible
 import com.example.apprestaran.need.tosat
 import com.example.apprestaran.need.visible
 
-class RepeatPinCodeActivit : AppCompatActivity() {
-    lateinit var binding:ActivityRepeatPinCodeActivitBinding
+class CheckPinCodeActivity : AppCompatActivity() {
     lateinit var textViewList: MutableList<TextView>
     lateinit var pinCode:String
     lateinit var sharePereferenseHelper: SharePereferenseHelper
+    lateinit var binding:ActivityCheckPinCodeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityRepeatPinCodeActivitBinding.inflate(layoutInflater)
+        binding = ActivityCheckPinCodeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        pinCode = intent.getStringExtra("pincode")!!
         btnClickListener()
         checkAndRemovePinCode()
         sharePereferenseHelper = SharePereferenseHelper(this)
+        pinCode = sharePereferenseHelper.getPinCode()
     }
     private fun btnClickListener() {
         binding.apply {
@@ -129,7 +128,7 @@ class RepeatPinCodeActivit : AppCompatActivity() {
                 sharePereferenseHelper.setPinCode(pinCode)
                 var i = Intent(this, AdminMainActivity::class.java)
                 startActivity(i)
-                finishAffinity()
+                finish()
             }
             else{
                 tosat(this, getString(R.string.kiritilgan_ma_lumot_mos_kelmaydi))

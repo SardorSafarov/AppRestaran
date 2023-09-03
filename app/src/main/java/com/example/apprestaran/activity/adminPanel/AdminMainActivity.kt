@@ -1,18 +1,23 @@
 package com.example.apprestaran.activity.adminPanel
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.example.apprestaran.R
 import com.example.apprestaran.databinding.ActivityAdminMainBinding
+import com.example.apprestaran.need.tosat
+
 
 class AdminMainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAdminMainBinding
     private lateinit var navController: NavController
+    var doubleBackToExitPressedOnce = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -51,6 +56,20 @@ class AdminMainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+
+
+    override fun onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed()
+            return
+        }
+        doubleBackToExitPressedOnce = true
+        tosat(this, getString(R.string.chiqish_uchun_orqaga_tugmasini_bosing))
+        Handler(Looper.getMainLooper()).postDelayed(Runnable {
+            doubleBackToExitPressedOnce = false
+        }, 2000)
     }
 }
 

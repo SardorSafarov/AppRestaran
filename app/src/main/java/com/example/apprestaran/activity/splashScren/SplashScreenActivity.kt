@@ -12,6 +12,8 @@ import androidx.core.content.ContextCompat
 import com.example.apprestaran.MainActivity
 import com.example.apprestaran.R
 import com.example.apprestaran.activity.language.LanguageActivity
+import com.example.apprestaran.activity.login.LoginActivity
+import com.example.apprestaran.activity.pinCode.CheckPinCodeActivity
 import com.example.apprestaran.localMemory.SharePereferenseHelper
 import java.util.Locale
 
@@ -26,7 +28,12 @@ class SplashScreenActivity : AppCompatActivity() {
         object : CountDownTimer(2000,3500){
             override fun onTick(p0: Long) {}
             override fun onFinish() {
+                if (sharePereferenseHelper.getAppLanguage()=="empty")
                 startActivity(Intent(this@SplashScreenActivity, LanguageActivity::class.java))
+                if (sharePereferenseHelper.getPinCode()=="empty")
+                    startActivity(Intent(this@SplashScreenActivity, LoginActivity::class.java))
+                else
+                    startActivity(Intent(this@SplashScreenActivity, CheckPinCodeActivity::class.java))
                 finish()
             }
         }.start()
