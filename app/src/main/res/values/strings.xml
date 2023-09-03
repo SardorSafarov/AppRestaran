@@ -28,4 +28,11 @@
     <string name="password_hiden">*******</string>
     <string name="telefon_nomerni_to_liq_kiriting">Telefon nomerni to\'liq kiriting</string>
     <string name="parolni_kiriting">Parolni kiriting</string>
+    <string name="ismingiz">Ismingiz</string>
+    <string name="restaraningizni_nomini_kiriting">Restaraningizni nomini kiriting</string>
+    <string name="restaraningiz_nomi">Restaraningiz nomi</string>
+    <string name="offerta_shartlari_bilan_tanishib_chiqing">Offerta shartlari bilan tanishib chiqing!!</string>
+    <string name="parolni_bir_xil_emas">Parolni bir xil emas</string>
+    <string name="ro_yxatdan_o_tish_1">Ro\'yxatdan o\'tish</string>
+    <string name="parolda_kamida_4_ta_belgi_bo_lsin">Parolda kamida 4 ta belgi bo\'lsin</string>
 </resources>

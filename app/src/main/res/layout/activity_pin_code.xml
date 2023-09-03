@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.pinCode.PinCodeActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_margin_20dp"
+        android:padding="@dimen/_16dp"
+        android:text="Yangi pin kod kiriting"
+        android:textColor="#000000"
+        android:textSize="@dimen/_32sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="4 xonali pin kod yarating"
+        android:textColor="#000000"
+        android:textSize="@dimen/txt_24sp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn1"
+
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_22sp"
+            android:layout_width="80dp"
+            android:text="1"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_pin_code_btn"
+            android:elevation="@dimen/radius_10dp"
+            android:stateListAnimator="@null"
+            android:layout_marginVertical="15dp"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn2"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_22sp"
+            android:layout_width="80dp"
+            android:text="2"
+            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_pin_code_btn"
+            android:elevation="@dimen/radius_10dp"
+            android:stateListAnimator="@null"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn3"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_22sp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="3"
+            android:background="@drawable/bg_pin_code_btn"
+            android:elevation="@dimen/radius_10dp"
+            android:stateListAnimator="@null"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn4"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_22sp"
+            android:layout_width="80dp"
+            android:text="4"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_pin_code_btn"
+            android:elevation="@dimen/radius_10dp"
+            android:stateListAnimator="@null"
+            android:layout_marginVertical="15dp"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn5"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_22sp"
+            android:layout_width="80dp"
+            android:text="5"
+            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_pin_code_btn"
+            android:elevation="@dimen/radius_10dp"
+            android:stateListAnimator="@null"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn6"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_22sp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="6"
+            android:background="@drawable/bg_pin_code_btn"
+            android:elevation="@dimen/radius_10dp"
+            android:stateListAnimator="@null"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn7"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_22sp"
+            android:layout_width="80dp"
+            android:text="7"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_pin_code_btn"
+            android:elevation="@dimen/radius_10dp"
+            android:stateListAnimator="@null"
+            android:layout_marginVertical="15dp"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn8"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_22sp"
+            android:layout_width="80dp"
+            android:text="8"
+            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_pin_code_btn"
+            android:elevation="@dimen/radius_10dp"
+            android:stateListAnimator="@null"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn9"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_22sp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="9"
+            android:background="@drawable/bg_pin_code_btn"
+            android:elevation="@dimen/radius_10dp"
+            android:stateListAnimator="@null"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_22sp"
+            android:layout_width="80dp"
+            android:text="7"
+            android:visibility="invisible"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_pin_code_btn"
+            android:elevation="@dimen/radius_10dp"
+            android:stateListAnimator="@null"
+            android:layout_marginVertical="15dp"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn0"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_22sp"
+            android:layout_width="80dp"
+            android:text="0"
+            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_pin_code_btn"
+            android:elevation="@dimen/radius_10dp"
+            android:stateListAnimator="@null"
+            />
+
+        <ImageView
+            android:id="@+id/btn_clear"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_22sp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="9"
+            android:visibility="invisible"
+            android:background="@drawable/bg_pin_code_btn"
+            android:backgroundTint="#8d9396"
+            android:src="@drawable/baseline_chevron_left_24"
+            android:padding="@dimen/padding_margin_20dp"
+            android:elevation="@dimen/radius_10dp"
+            android:stateListAnimator="@null"
+            app:tint="@color/white" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

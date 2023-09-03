@@ -13,20 +13,18 @@
         android:theme="@style/Theme.AppRestaran"
         tools:targetApi="31">
         <activity
+            android:name=".activity.pinCode.PinCodeActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.adminPanel.AdminMainActivity"
-            android:exported="true"
-           >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".activity.adminPanel.AdminRegisterActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".activity.login.LoginActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize" >
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,11 +36,7 @@
             android:exported="false" />
         <activity
             android:name=".activity.splashScren.SplashScreenActivity"
-            android:exported="true">
-
-
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" />

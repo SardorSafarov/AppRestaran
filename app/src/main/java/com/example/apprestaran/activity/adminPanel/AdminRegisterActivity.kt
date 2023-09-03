@@ -15,6 +15,7 @@ import com.example.apprestaran.databinding.ActivityAdminRegisterBinding
 import com.example.apprestaran.localMemory.SharePereferenseHelper
 import com.example.apprestaran.mask.PhoneNumberTextWatcher
 import com.example.apprestaran.need.passwordShowOnOFF
+import com.example.apprestaran.need.tosat
 
 class AdminRegisterActivity : AppCompatActivity() {
     lateinit var binding: ActivityAdminRegisterBinding
@@ -30,16 +31,42 @@ class AdminRegisterActivity : AppCompatActivity() {
     }
 
 
-
     private fun btnSetOnClikListener() {
         binding.btnNext.setOnClickListener {
-            sharePereferenseHelper.setAdminName(binding.edtAdminName.text.toString())
-            sharePereferenseHelper.setRestaranName(binding.edtRestaranName.text.toString())
-            finish()
+            var message = validationData()
+            if (message == "ok") {
+                sharePereferenseHelper.setAdminName(binding.edtAdminName.text.toString())
+                sharePereferenseHelper.setRestaranName(binding.edtRestaranName.text.toString())
+                finish()
+            } else {
+                tosat(this@AdminRegisterActivity, message)
+            }
         }
 
         openCountryCode()
         passwordShowNotShow()
+    }
+
+    private fun validationData(): String {
+        binding.apply {
+            if (edtAdminName.text!!.trim().isEmpty())
+                return getString(R.string.ismingizni_kiriting)
+            if (edtRestaranName.text!!.trim().isEmpty())
+                return getString(R.string.restaraningizni_nomini_kiriting)
+            if (edtRestaranName.text.trim().isEmpty())
+                return getString(R.string.restaraningizni_nomini_kiriting)
+            if (edtPhoneNumber.text.length!=edtPhoneNumber.hint.length)
+                return getString(R.string.telefon_nomerni_to_liq_kiriting)
+            if (edtPassword1.text.trim().length==edtPhoneNumber.hint.length || edtPassword2.text.trim().isEmpty())
+                return getString(R.string.parolni_kiriting)
+            if (edtPassword1.text.toString().trim()!=edtPassword2.text.toString().trim())
+                return getString(R.string.parolni_bir_xil_emas)
+            if (edtPassword1.text.trim().length<4)
+                return getString(R.string.parolda_kamida_4_ta_belgi_bo_lsin)
+            if (!chexcboxOffreta.isChecked)
+                return getString(R.string.offerta_shartlari_bilan_tanishib_chiqing)
+        }
+        return "ok"
     }
 
     @SuppressLint("RestrictedApi")
@@ -111,13 +138,14 @@ class AdminRegisterActivity : AppCompatActivity() {
 
         }
     }
+
     private fun passwordShowNotShow() {
         binding.apply {
             btnPasswordShow1.setOnClickListener {
-                passwordShowOnOFF(this@AdminRegisterActivity,imgEye1,edtPassword1)
+                passwordShowOnOFF(this@AdminRegisterActivity, imgEye1, edtPassword1)
             }
             btnPasswordShow2.setOnClickListener {
-                passwordShowOnOFF(this@AdminRegisterActivity,imgEye2,edtPassword2)
+                passwordShowOnOFF(this@AdminRegisterActivity, imgEye2, edtPassword2)
 
             }
         }

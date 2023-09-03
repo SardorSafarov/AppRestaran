@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/background"
+    android:orientation="vertical"
     tools:context=".activity.adminPanel.AdminRegisterActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -16,10 +16,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/padding_margin_30dp"
-            android:text="@string/ro_yxatdan_o_tish"
+            android:layout_marginTop="@dimen/padding_margin_20dp"
+            android:padding="@dimen/_16dp"
+            android:text="@string/ro_yxatdan_o_tish_1"
             android:textColor="#000000"
-            android:textSize="@dimen/txt_40sp"
+            android:textSize="@dimen/_32sp"
             android:textStyle="bold" />
 
 
@@ -61,16 +62,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
-                android:hint="@string/ismingizni_kiriting"
+                android:hint="@string/ismingiz"
                 android:inputType="textCapWords"
                 android:paddingStart="@dimen/radius_10dp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:layout_marginStart="@dimen/_15dp"
-            android:text="@string/restoran_nomi"
+            android:text="@string/restaraningizni_nomini_kiriting"
             android:textColor="#000000"
 
             />
@@ -103,19 +105,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
-                android:hint="@string/restoran_nomi"
+                android:hint="@string/restaraningiz_nomi"
                 android:inputType="textCapSentences"
                 android:paddingStart="@dimen/radius_10dp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="10dp"
-        android:layout_marginStart="@dimen/_15dp"
-        android:text="Telefon raqamini kiriting"
-        android:textColor="#000000"
 
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="@dimen/_15dp"
+            android:text="Telefon raqamini kiriting"
+            android:textColor="#000000"
+
+            />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -130,8 +133,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_country_code"
                 android:gravity="center"
-                android:paddingVertical="@dimen/radius_10dp"
-                >
+                android:paddingVertical="@dimen/radius_10dp">
 
                 <ImageView
                     android:id="@+id/img_country_flag"
@@ -158,6 +160,7 @@
                 android:inputType="phone"
                 android:paddingStart="@dimen/radius_10dp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -167,6 +170,7 @@
             android:textColor="#000000"
 
             />
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -195,11 +199,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
-                android:hint="*******"
+                android:hint="@string/password_hiden"
                 android:inputType="textPassword"
-                android:paddingStart="@dimen/radius_10dp"
-                />
+                android:paddingStart="@dimen/radius_10dp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -209,6 +213,7 @@
             android:textColor="#000000"
 
             />
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -239,17 +244,19 @@
                 android:background="@android:color/transparent"
                 android:hint="@string/password_hiden"
                 android:inputType="textPassword"
-                android:paddingStart="@dimen/radius_10dp"
-                />
+                android:paddingStart="@dimen/radius_10dp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <CheckBox
+                android:id="@+id/chexcbox_offreta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/padding_margin_30dp"
+                android:layout_marginVertical="@dimen/radius_10dp"
+                android:layout_marginStart="@dimen/_15dp"
                 android:text="@string/men_offerta_shartlariga_roziman" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -260,7 +267,8 @@
             android:layout_marginHorizontal="@dimen/_15dp"
             android:layout_marginBottom="@dimen/padding_margin_30dp"
             android:background="@drawable/bg_btn_next"
-            android:elevation="0dp"
+
+            app:elevation = "10dp"
             android:text="@string/kirish"
             android:textAllCaps="false"
             android:textColor="@color/black"
