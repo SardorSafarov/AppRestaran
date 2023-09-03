@@ -18,103 +18,230 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_margin_30dp"
             android:text="@string/ro_yxatdan_o_tish"
-            android:textColor="#585858"
+            android:textColor="#000000"
             android:textSize="@dimen/txt_40sp"
             android:textStyle="bold" />
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="@dimen/_15dp"
+            android:text="@string/ismingizni_kiriting"
+            android:textColor="#000000"
+
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/padding_margin_30dp"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:background="@drawable/bg_liner_layout"
+            android:elevation="10dp">
 
-            app:boxStrokeColor="@color/yellow"
-            app:hintTextColor="@color/yellow"
-            android:hint="@string/ismingizni_kiriting">
+            <androidx.appcompat.widget.LinearLayoutCompat
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_login"
-                android:inputType="textCapWords"
-                android:textCursorDrawable="@color/yellow"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_country_code"
+                android:gravity="center"
+                android:paddingVertical="@dimen/radius_10dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/yellow"
-            app:hintTextColor="@color/yellow"
-            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
-            android:layout_marginBottom="@dimen/padding_margin_30dp"
-            android:hint="@string/restoran_nomi">
+                <ImageView
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:inputType="textCapWords"
-                android:textCursorDrawable="@color/yellow"
-                android:layout_height="match_parent" />
-        </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_person_24" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/yellow"
-            app:hintTextColor="@color/yellow"
-            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
-            android:layout_marginBottom="@dimen/padding_margin_30dp"
-            android:hint="@string/tel_number">
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:textCursorDrawable="@color/yellow"
-                android:layout_height="match_parent"
-                android:inputType="phone" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
-            android:layout_marginBottom="@dimen/padding_margin_30dp"
-            android:hint="@string/parol"
-            app:passwordToggleEnabled="true"
-            app:boxStrokeColor="@color/yellow"
-            app:hintTextColor="@color/yellow"
-            app:passwordToggleTint="@color/yellow"
-
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:textCursorDrawable="@color/yellow"
-                android:layout_height="match_parent"
-                android:inputType="textPassword" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/yellow"
-            app:hintTextColor="@color/yellow"
-            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
-            android:layout_marginBottom="@dimen/padding_margin_30dp"
-            android:hint="@string/parolni_qayta_kirting"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/yellow">
-
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
+                android:id="@+id/edt_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textCursorDrawable="@color/yellow"
-                android:inputType="textPassword" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:background="@android:color/transparent"
+                android:hint="@string/ismingizni_kiriting"
+                android:inputType="phone"
+                android:paddingStart="@dimen/radius_10dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="@dimen/_15dp"
+            android:text="@string/restoran_nomi"
+            android:textColor="#000000"
 
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:background="@drawable/bg_liner_layout"
+            android:elevation="10dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_country_code"
+                android:gravity="center"
+                android:paddingVertical="@dimen/radius_10dp">
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_restaurant" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="@string/restoran_nomi"
+                android:inputType="phone"
+                android:paddingStart="@dimen/radius_10dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="@dimen/_15dp"
+        android:text="Telefon raqamini kiriting"
+        android:textColor="#000000"
+
+        />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:background="@drawable/bg_liner_layout"
+            android:elevation="10dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btn_country_code"
+                android:layout_width="74dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_country_code"
+                android:gravity="center"
+                android:paddingVertical="@dimen/radius_10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/img_country_flag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/flag_uz" />
+
+                <TextView
+                    android:id="@+id/text_country_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="+998"
+                    android:textColor="@color/black" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <EditText
+                android:id="@+id/edt_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="0000"
+                android:inputType="phone"
+                android:paddingStart="@dimen/radius_10dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="@dimen/_15dp"
+            android:text="@string/parol"
+            android:textColor="#000000"
+
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:background="@drawable/bg_liner_layout"
+            android:elevation="10dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btn_password_show_1"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_country_code"
+                android:gravity="center"
+                android:paddingVertical="@dimen/radius_10dp">
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_visibility_off_24" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <EditText
+                android:id="@+id/edt_password_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="*******"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/radius_10dp"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="@dimen/_15dp"
+            android:text="@string/parolni_qayta_kirting"
+            android:textColor="#000000"
+
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:background="@drawable/bg_liner_layout"
+            android:elevation="10dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btn_password_show_2"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_country_code"
+                android:gravity="center"
+                android:paddingVertical="@dimen/radius_10dp">
+
+                <ImageView
+                    android:id="@+id/img_eye"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_visibility_off_24" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <EditText
+                android:id="@+id/edt_password_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="@string/password_hiden"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/radius_10dp"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -130,7 +257,7 @@
             android:id="@+id/btn_next1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/padding_margin_30dp"
+            android:layout_marginHorizontal="@dimen/_15dp"
             android:layout_marginBottom="@dimen/padding_margin_30dp"
             android:background="@drawable/bg_btn_next"
             android:elevation="0dp"

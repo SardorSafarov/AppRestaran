@@ -227,6 +227,7 @@ class LoginActivity : AppCompatActivity() {
                     line1.visibility = View.GONE
                     TransitionManager.beginDelayedTransition(btnLinear1, AutoTransition())
                 }
+
                 img1.rotation = if (linear1) 90f else -90f
                 linear1 = !linear1
             }
