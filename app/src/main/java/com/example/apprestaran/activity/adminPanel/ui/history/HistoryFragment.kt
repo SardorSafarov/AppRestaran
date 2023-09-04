@@ -13,7 +13,9 @@ import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
 
 class HistoryFragment :  BaseFragment<FragmentHistoryBinding>(FragmentHistoryBinding::inflate) {
     override fun onViewCreate() {
-
+        binding.btnHamburger.setOnClickListener {
+            listener!!.drawerOnOff()
+        }
     }
 
 }

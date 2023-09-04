@@ -3,21 +3,25 @@ package com.example.apprestaran.activity.adminPanel
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.widget.Toast
+import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.example.apprestaran.R
+import com.example.apprestaran.activity.adminPanel.ui.DrawerOnOffInteface
 import com.example.apprestaran.databinding.ActivityAdminMainBinding
+import com.example.apprestaran.need.d
 import com.example.apprestaran.need.tosat
 
 
-class AdminMainActivity : AppCompatActivity() {
+class AdminMainActivity : AppCompatActivity(),DrawerOnOffInteface {
 
     private lateinit var binding: ActivityAdminMainBinding
     private lateinit var navController: NavController
     var doubleBackToExitPressedOnce = false
+    lateinit var drawer:DrawerLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAdminMainBinding.inflate(layoutInflater)
@@ -25,6 +29,7 @@ class AdminMainActivity : AppCompatActivity() {
         navController = findNavController(R.id.nav_host_fragment_activity_admin_main)
         setupWithNavController(binding.navView, navController)
         navigationFragment()
+        drawer = binding.drawerLayout
     }
 
     private fun navigationFragment() {
@@ -70,6 +75,15 @@ class AdminMainActivity : AppCompatActivity() {
             doubleBackToExitPressedOnce = false
         }, 2000)
     }
+    override fun drawerOnOff() {
+        if (drawer.isDrawerOpen(Gravity.LEFT)) {
+            drawer.closeDrawer(Gravity.LEFT)
+        } else {
+            drawer.openDrawer(Gravity.LEFT)
+        }
+    }
+
+
 }
 
 

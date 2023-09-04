@@ -18,7 +18,7 @@
 
         <ImageView
             android:id="@+id/btn_hamburger"
-            android:layout_width="40dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/radius_10dp"
             android:src="@drawable/ic_hamburger"
@@ -105,7 +105,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingTop="@dimen/radius_10dp"
-                        android:src="@drawable/cooker"
+                        android:src="@drawable/ic_cooker"
                         app:tint="@color/black" />
 
                     <TextView

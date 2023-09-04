@@ -13,6 +13,8 @@ import com.example.e_kengash.main.fragments.baseFragment.BaseFragment
 
 class WorkerFragment : BaseFragment<FragmentWorkerBinding>(FragmentWorkerBinding::inflate) {
     override fun onViewCreate() {
-
+        binding.btnHamburger.setOnClickListener {
+            listener!!.drawerOnOff()
+        }
     }
 }

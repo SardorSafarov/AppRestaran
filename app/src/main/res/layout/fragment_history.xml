@@ -16,7 +16,7 @@
 
         <ImageView
             android:id="@+id/btn_hamburger"
-            android:layout_width="40dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/radius_10dp"
             android:src="@drawable/ic_hamburger"

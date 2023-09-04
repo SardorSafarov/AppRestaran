@@ -15,7 +15,6 @@
     <fragment
         android:id="@+id/navigation_calendar"
         android:name="com.example.apprestaran.activity.adminPanel.ui.calendar.CalendarFragment"
-
         tools:layout="@layout/fragment_calendar" />
 
     <fragment

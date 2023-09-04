@@ -50,4 +50,7 @@
     <string name="stollar">Stollar</string>
     <string name="menejerlar">Menejerlar</string>
     <string name="omborchilar">Omborchilar</string>
+    <string name="mahsulotlar">Mahsulotlar</string>
+    <string name="hisobdan_chiqish">Hisobdan chiqish</string>
+    <string name="sozlanmalar">Sozlanmalar</string>
 </resources>
