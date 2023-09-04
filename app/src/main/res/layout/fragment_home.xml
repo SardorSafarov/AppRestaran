@@ -13,38 +13,29 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/statusbar"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:paddingHorizontal="15dp">
 
-        <androidx.appcompat.widget.AppCompatButton
 
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_baseline_arrow_back_ios_24"
-            android:elevation="@dimen/padding_margin_20dp" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/xush_kelibsiz"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="@dimen/txt_16sp"
-                />
+                android:textSize="@dimen/txt_16sp" />
+
             <TextView
                 android:id="@+id/text_admin_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
                 android:layout_gravity="center"
+                android:text="Name"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="@dimen/txt_16sp"
@@ -52,72 +43,179 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_editor"
-
-            android:elevation="@dimen/padding_margin_20dp" />
-
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_marginTop="@dimen/padding_margin_20dp"
-        android:paddingHorizontal="15dp">
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="2">
 
-        <com.google.android.material.button.MaterialButton
-            app:backgroundTint="#e4e9ed"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_rowWeight="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="@dimen/_15dp"
             android:background="@drawable/bg_contact_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:elevation="@dimen/padding_margin_20dp" />
+            android:elevation="@dimen/padding_margin_20dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <View
-            android:layout_width="@dimen/padding_margin_20dp"
-            android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/_15dp"
+                android:src="@drawable/ic_product"
+                app:tint="@color/black" />
 
-        <com.google.android.material.button.MaterialButton
-            app:backgroundTint="#e4e9ed"
-            android:background="@drawable/bg_liner_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:elevation="@dimen/padding_margin_20dp" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15dp"
+                android:text="Mahsulotlar"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:paddingHorizontal="15dp">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_rowWeight="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="@dimen/_15dp"
+            android:background="@drawable/bg_contact_btn"
+            android:elevation="@dimen/padding_margin_20dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <com.google.android.material.button.MaterialButton
-            app:backgroundTint="#e4e9ed"
-            android:background="@drawable/bg_liner_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:elevation="@dimen/padding_margin_20dp" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
 
-        <View
-            android:layout_width="@dimen/padding_margin_20dp"
-            android:layout_height="wrap_content" />
+                android:src="@drawable/ic_worker1"
+                app:tint="@color/black" />
 
-        <com.google.android.material.button.MaterialButton
-            app:backgroundTint="#e4e9ed"
-            android:background="@drawable/bg_liner_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:elevation="@dimen/padding_margin_20dp" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15dp"
+                android:text="@string/xodimlar"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_rowWeight="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="@dimen/_15dp"
+            android:background="@drawable/bg_contact_btn"
+            android:elevation="@dimen/padding_margin_20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:paddingTop="@dimen/_15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:src="@drawable/ic_warehouse"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15dp"
+                android:text="@string/ombor"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_rowWeight="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="@dimen/_15dp"
+            android:background="@drawable/bg_contact_btn"
+            android:elevation="@dimen/padding_margin_20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/_15dp"
+                android:src="@drawable/ic_report"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15dp"
+                android:text="Hisobotlar"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_rowWeight="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="@dimen/_15dp"
+            android:background="@drawable/bg_contact_btn"
+            android:elevation="@dimen/padding_margin_20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:src="@drawable/ic_worker1"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15dp"
+                android:text="@string/xodimlar"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageView
+            android:layout_rowWeight="1"
+
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="@dimen/_15dp"
+            android:background="@drawable/bg_contact_btn"
+            android:elevation="@dimen/padding_margin_20dp"
+            android:src="@drawable/baseline_visibility_off_24"
+            android:visibility="invisible"
+
+            app:backgroundTint="#e4e9ed" />
+
+        <ImageView
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="@dimen/_15dp"
+            android:background="@drawable/bg_contact_btn"
+            android:elevation="@dimen/padding_margin_20dp"
+            android:src="@drawable/baseline_visibility_off_24"
+            android:visibility="invisible"
+            app:backgroundTint="#e4e9ed" />
+
+
+    </GridLayout>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>
