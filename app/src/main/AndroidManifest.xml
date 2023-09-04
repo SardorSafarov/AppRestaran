@@ -34,7 +34,7 @@
             android:name=".activity.departments.worker.OfitsantsActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.departments.WearHouseActivity"
+            android:name=".activity.departments.WearHouseProductActivity"
             android:exported="false" />
         <activity
             android:name=".activity.departments.ProductActivity"

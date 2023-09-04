@@ -114,6 +114,14 @@ class AdminMainActivity : AppCompatActivity(), DrawerOnOffInteface {
         }, 2000)
     }
 
+    override fun worker() {
+        navController.navigate(R.id.navigation_worker)
+    }
+
+    override fun report() {
+        navController.navigate(R.id.navigation_history)
+    }
+
     override fun drawerOnOff() {
         if (drawer.isDrawerOpen(Gravity.LEFT)) {
             drawer.closeDrawer(Gravity.LEFT)
