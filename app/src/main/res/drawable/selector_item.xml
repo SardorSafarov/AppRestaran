@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Tugma tanlandi -->
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape
+                    android:shape="rectangle">
+                    <solid android:color="@color/black" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <!-- Tugma tanlanmagan -->
+    <item android:state_checked="false">
+        <layer-list>
+                <shape
+                    android:shape="rectangle">
+                    <solid android:color="#EA0000" />
+                </shape>
+        </layer-list>
+    </item>
+</selector>
