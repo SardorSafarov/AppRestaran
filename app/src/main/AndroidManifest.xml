@@ -13,6 +13,33 @@
         android:theme="@style/Theme.AppRestaran"
         tools:targetApi="31">
         <activity
+            android:name=".activity.departments.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.departments.worker.AccountantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.departments.worker.TablesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.departments.worker.WarehouseWorkerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.departments.worker.ManagersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.departments.worker.CookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.departments.worker.OfitsantsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.departments.WearHouseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.departments.ProductActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.pinCode.CheckPinCodeActivity"
             android:exported="false" />
         <activity
@@ -21,11 +48,11 @@
         <activity
             android:name=".activity.pinCode.PinCodeActivity"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.adminPanel.AdminMainActivity"
             android:exported="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,7 +67,7 @@
             android:name=".activity.login.LoginActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activity.language.LanguageActivity"
             android:exported="false"
@@ -52,9 +79,7 @@
         <activity
             android:name=".activity.splashScren.SplashScreenActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
