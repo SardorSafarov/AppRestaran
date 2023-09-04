@@ -4,21 +4,20 @@
 
     <group android:id="@+id/menu1">
         <item
-            android:id="@+id/navigation_home"
+            android:id="@+id/navigation_drawer_home"
             android:icon="@drawable/ic_home_black_24dp"
             android:title="@string/bosh_sahifa" />
         <item
-            android:id="@+id/navigation_worker"
+            android:id="@+id/navigation_drawer_worker"
             android:icon="@drawable/ic_worker"
             android:title="@string/xodim" />
         <item
-            android:id="@+id/navigation_history"
+            android:id="@+id/navigation_drawer_history"
             android:icon="@drawable/ic_history"
             android:title="@string/tarix" />
     </group>
     <group android:id="@+id/menu2">
         <item
-
             android:icon="@drawable/ic_product"
             android:title="@string/mahsulotlar" />
         <item

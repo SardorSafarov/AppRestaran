@@ -20,7 +20,7 @@
             android:id="@+id/btn_hamburger"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/radius_10dp"
+
             android:src="@drawable/ic_hamburger"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
