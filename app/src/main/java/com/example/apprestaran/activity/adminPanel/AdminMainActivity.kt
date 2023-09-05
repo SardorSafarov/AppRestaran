@@ -43,7 +43,7 @@ class AdminMainActivity : AppCompatActivity(), DrawerOnOffInteface {
     }
 
     private fun navigationDrawerItemClick() {
-        var anim = ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+
         binding.navDrawerView.setNavigationItemSelectedListener(object :
             NavigationView.OnNavigationItemSelectedListener {
             override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -62,21 +62,25 @@ class AdminMainActivity : AppCompatActivity(), DrawerOnOffInteface {
                         true
                     }
                     R.id.nav_drawer_product->{
+                        var anim = ActivityOptions.makeSceneTransitionAnimation(this@AdminMainActivity).toBundle()
                         var i = Intent(this@AdminMainActivity, ProductActivity::class.java)
                         startActivity(i,anim)
                         true
                     }
                     R.id.nav_drawer_warehouse->{
+                        var anim = ActivityOptions.makeSceneTransitionAnimation(this@AdminMainActivity).toBundle()
                         var i = Intent(this@AdminMainActivity, WearHouseProductActivity::class.java)
                         startActivity(i,anim)
                         true
                     }
                     R.id.nav_drawer_tarif->{
+                        var anim = ActivityOptions.makeSceneTransitionAnimation(this@AdminMainActivity).toBundle()
                         var i = Intent(this@AdminMainActivity, TarifActivity::class.java)
                         startActivity(i,anim)
                         true
                     }
                     R.id.nav_drawer_settings->{
+                        var anim = ActivityOptions.makeSceneTransitionAnimation(this@AdminMainActivity).toBundle()
                         var i = Intent(this@AdminMainActivity, SettingsActivity::class.java)
                         startActivity(i,anim)
                         true

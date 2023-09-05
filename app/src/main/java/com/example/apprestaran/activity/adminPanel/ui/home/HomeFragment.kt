@@ -17,11 +17,12 @@ class HomeFragment() : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::in
 
     private fun btnClickListener() {
         binding.apply {
-            var anim = ActivityOptions.makeSceneTransitionAnimation(requireActivity()).toBundle()
+
             btnHamburger.setOnClickListener {
                 listener!!.drawerOnOff()
             }
             btnProduct.setOnClickListener {
+                var anim = ActivityOptions.makeSceneTransitionAnimation(requireActivity()).toBundle()
                 var i = Intent(requireContext(), ProductActivity::class.java)
                 startActivity(i, anim)
             }
@@ -29,6 +30,7 @@ class HomeFragment() : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::in
               listener!!.worker()
             }
             btnWarehouse.setOnClickListener {
+                var anim = ActivityOptions.makeSceneTransitionAnimation(requireActivity()).toBundle()
                 var i = Intent(requireContext(), WearHouseProductActivity::class.java)
                 startActivity(i, anim)
             }
