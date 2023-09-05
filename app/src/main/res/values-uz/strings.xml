@@ -59,4 +59,12 @@
     <string name="mahsulot_haqida">Mahsulot haqida</string>
     <string name="narxi">Narxi</string>
     <string name="oldingi_narxi">Oldingi narxi</string>
+    <string name="_0_ta_qolgan">0 ta qolgan</string>
+    <string name="_0_ta_qo_shilgan">0 ta qo\'shilgan</string>
+    <string name="chegirma_0_0">Chegirma 0.0%</string>
+    <string name="mahsulot_nomi">Mahsulot nomi</string>
+    <string name="bo_lim_nomi">Bo\'lim nomi</string>
+    <string name="saqlash">Saqlash</string>
+    <string name="qo_shish">Qo\'shish</string>
+    <string name="mahsulot_qo_shish">Mahsulot qo\'shish</string>
 </resources>
