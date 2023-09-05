@@ -47,6 +47,15 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:paddingVertical="@dimen/_24dp"
+            android:paddingEnd="@dimen/radius_10dp"
+            android:src="@drawable/ic_report"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayoutCompat2"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
