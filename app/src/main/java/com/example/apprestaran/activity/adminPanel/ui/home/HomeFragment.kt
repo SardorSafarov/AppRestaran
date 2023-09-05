@@ -2,7 +2,7 @@ package com.example.apprestaran.activity.adminPanel.ui.home
 
 import android.app.ActivityOptions
 import android.content.Intent
-import com.example.apprestaran.activity.departments.ProductActivity
+import com.example.apprestaran.activity.departments.product.ProductActivity
 import com.example.apprestaran.activity.departments.WearHouseProductActivity
 import com.example.apprestaran.databinding.FragmentHomeBinding
 import com.example.e_kengash.main.fragments.baseFragment.BaseFragment

@@ -54,4 +54,5 @@
     <string name="hisobdan_chiqish">Hisobdan chiqish</string>
     <string name="sozlanmalar">Sozlanmalar</string>
     <string name="mahsulotlar_bo_limi">Mahsulotlar bo\'limi</string>
+    <string name="bo_lim">Bo\'lim</string>
 </resources>
