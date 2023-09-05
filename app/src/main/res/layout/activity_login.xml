@@ -68,7 +68,7 @@
                 android:layout_marginVertical="10dp"
                 android:orientation="vertical"
                 android:paddingVertical="@dimen/radius_10dp"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <TextView
                     android:layout_width="wrap_content"

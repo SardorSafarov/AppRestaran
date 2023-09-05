@@ -21,5 +21,10 @@ class ProductActivity : AppCompatActivity() {
             var anim = ActivityOptions.makeSceneTransitionAnimation(this@ProductActivity).toBundle()
             startActivity(i, anim)
         }
+        binding.btnAddProduct.setOnClickListener {
+            var i = Intent(this@ProductActivity, ProductAddActivity::class.java)
+            var anim = ActivityOptions.makeSceneTransitionAnimation(this@ProductActivity).toBundle()
+            startActivity(i, anim)
+        }
     }
 }

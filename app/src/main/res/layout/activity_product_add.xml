@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.departments.product.ProductAddActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/statusbar"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/btn_exit"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:paddingVertical="@dimen/padding_margin_20dp"
+            android:paddingStart="@dimen/_15dp"
+            android:src="@drawable/baseline_chevron_left_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="@dimen/_15dp"
+                android:text="Mahsulot nomi"
+                android:textColor="#000000"
+
+                />
+
+            <EditText
+                android:id="@+id/edt_departament_name"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/nomi"
+                android:paddingStart="@dimen/_16dp"
+                android:inputType="textCapSentences"
+                android:background="@drawable/bg_liner_layout"
+                android:elevation="@dimen/radius_10dp"
+                android:layout_marginHorizontal="@dimen/_15dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="@dimen/_15dp"
+                android:text="Bo'lim nomi"
+                android:textColor="#000000"
+
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingStart="@dimen/_16dp"
+                android:inputType="textCapSentences"
+                android:background="@drawable/bg_liner_layout"
+                android:elevation="@dimen/radius_10dp"
+                android:layout_marginHorizontal="@dimen/_15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="@dimen/_15dp"
+                android:text="@string/mahsulot_haqida"
+                android:textColor="#000000"
+
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="5"
+                android:scrollbars="vertical"
+                android:hint="@string/mahsulot_haqida"
+                android:paddingStart="@dimen/_16dp"
+                android:paddingVertical="@dimen/_16dp"
+                android:background="@drawable/bg_liner_layout"
+                android:elevation="@dimen/radius_10dp"
+                android:layout_marginHorizontal="@dimen/_15dp"
+                />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginStart="@dimen/_15dp"
+                        android:text="@string/narxi"
+                        android:textColor="#000000"
+
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="@string/narxi"
+                        android:paddingStart="@dimen/_16dp"
+                        android:inputType="numberDecimal"
+                        android:minLines="3"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_liner_layout"
+                        android:elevation="@dimen/radius_10dp"
+                        android:layout_marginHorizontal="@dimen/_15dp"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginStart="@dimen/_15dp"
+                        android:text="@string/oldingi_narxi"
+                        android:textColor="#000000"
+
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="@string/oldingi_narxi"
+                        android:paddingStart="@dimen/_16dp"
+                        android:inputType="numberDecimal"
+                        android:minLines="3"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_liner_layout"
+                        android:elevation="@dimen/radius_10dp"
+                        android:layout_marginHorizontal="@dimen/_15dp"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

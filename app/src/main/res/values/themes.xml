@@ -7,4 +7,11 @@
     </style>
 
     <style name="Theme.AppRestaran" parent="Base.Theme.AppRestaran" />
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:radius">@dimen/radius_10dp</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFrame">@null</item>
+    </style>
 </resources>

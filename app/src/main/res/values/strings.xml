@@ -55,4 +55,8 @@
     <string name="sozlanmalar">Sozlanmalar</string>
     <string name="mahsulotlar_bo_limi">Mahsulotlar bo\'limi</string>
     <string name="bo_lim">Bo\'lim</string>
+    <string name="nomi">Nomi</string>
+    <string name="mahsulot_haqida">Mahsulot haqida</string>
+    <string name="narxi">Narxi</string>
+    <string name="oldingi_narxi">Oldingi narxi</string>
 </resources>
