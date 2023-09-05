@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AppRestaran"
         tools:targetApi="31">
         <activity
+            android:name=".activity.departments.TarifActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.departments.SettingsActivity"
             android:exported="false" />
         <activity

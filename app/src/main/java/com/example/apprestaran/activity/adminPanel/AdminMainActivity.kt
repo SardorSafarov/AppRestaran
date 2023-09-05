@@ -1,5 +1,7 @@
 package com.example.apprestaran.activity.adminPanel
 
+import android.app.ActivityOptions
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -12,6 +14,10 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.example.apprestaran.R
 import com.example.apprestaran.activity.adminPanel.ui.DrawerOnOffInteface
+import com.example.apprestaran.activity.departments.ProductActivity
+import com.example.apprestaran.activity.departments.SettingsActivity
+import com.example.apprestaran.activity.departments.TarifActivity
+import com.example.apprestaran.activity.departments.WearHouseProductActivity
 import com.example.apprestaran.databinding.ActivityAdminMainBinding
 import com.example.apprestaran.need.d
 import com.example.apprestaran.need.tosat
@@ -24,6 +30,7 @@ class AdminMainActivity : AppCompatActivity(), DrawerOnOffInteface {
     private lateinit var navController: NavController
     var doubleBackToExitPressedOnce = false
     lateinit var drawer: DrawerLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAdminMainBinding.inflate(layoutInflater)
@@ -36,6 +43,7 @@ class AdminMainActivity : AppCompatActivity(), DrawerOnOffInteface {
     }
 
     private fun navigationDrawerItemClick() {
+        var anim = ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
         binding.navDrawerView.setNavigationItemSelectedListener(object :
             NavigationView.OnNavigationItemSelectedListener {
             override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -45,17 +53,34 @@ class AdminMainActivity : AppCompatActivity(), DrawerOnOffInteface {
                         navController.navigate(R.id.navigation_home)
                         true
                     }
-
                     R.id.navigation_drawer_worker -> {
                         navController.navigate(R.id.navigation_worker)
                         true
                     }
-
                     R.id.navigation_drawer_history -> {
                         navController.navigate(R.id.navigation_history)
                         true
                     }
-
+                    R.id.nav_drawer_product->{
+                        var i = Intent(this@AdminMainActivity, ProductActivity::class.java)
+                        startActivity(i,anim)
+                        true
+                    }
+                    R.id.nav_drawer_warehouse->{
+                        var i = Intent(this@AdminMainActivity, WearHouseProductActivity::class.java)
+                        startActivity(i,anim)
+                        true
+                    }
+                    R.id.nav_drawer_tarif->{
+                        var i = Intent(this@AdminMainActivity, TarifActivity::class.java)
+                        startActivity(i,anim)
+                        true
+                    }
+                    R.id.nav_drawer_settings->{
+                        var i = Intent(this@AdminMainActivity, SettingsActivity::class.java)
+                        startActivity(i,anim)
+                        true
+                    }
                     else -> true
                 }
 

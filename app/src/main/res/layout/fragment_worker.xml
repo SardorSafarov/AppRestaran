@@ -13,14 +13,15 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/statusbar"
         android:gravity="center_vertical"
-        android:paddingHorizontal="15dp">
+        >
 
 
         <ImageView
             android:id="@+id/btn_hamburger"
             android:layout_width="50dp"
-            android:layout_height="wrap_content"
-
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/radius_10dp"
+            android:paddingVertical="@dimen/_24dp"
             android:src="@drawable/ic_hamburger"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

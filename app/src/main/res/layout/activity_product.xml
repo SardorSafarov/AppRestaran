@@ -12,13 +12,15 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/statusbar"
         android:gravity="center_vertical"
-        android:paddingHorizontal="15dp">
+       >
 
 
         <ImageView
             android:id="@+id/btn_exit"
             android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:layout_height="match_parent"
+            android:paddingVertical="@dimen/padding_margin_20dp"
             android:src="@drawable/baseline_chevron_left_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
