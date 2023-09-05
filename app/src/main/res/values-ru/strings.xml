@@ -67,4 +67,19 @@
     <string name="saqlash">Saqlash</string>
     <string name="qo_shish">Qo\'shish</string>
     <string name="mahsulot_qo_shish">Mahsulot qo\'shish</string>
+    <string name="ofitsantlar_bo_limi">Ofitsantlar bo\'limi</string>
+    <string name="bo_lim_nomini_kiriting">Bo\'lim nomini kiriting</string>
+    <string name="ismi">Ismi</string>
+    <string name="bekor_qilish">Bekor qilish</string>
+    <string name="oshpaz_qo_shish">Oshpaz qo\'shish</string>
+    <string name="ofitsant_qo_shish">Ofitsant qo\'shish</string>
+    <string name="kassir_qo_shish">Kassir qo\'shish</string>
+    <string name="omborchi_qo_shish">Omborchi qo\'shish</string>
+    <string name="menejer_qo_shish">Menejer qo\'shish</string>
+    <string name="stollar_bo_limini_qo_shish">Stollar bo\'limini qo\'shish</string>
+    <string name="omborchilar_bo_limi">Omborchilar bo\'limi</string>
+    <string name="stollar_bo_limi">Stollar bo\'limi</string>
+    <string name="menejerlar_bo_limi">Menejerlar bo\'limi</string>
+    <string name="oshpazlar_bo_limi">Oshpazlar bo\'limi</string>
+    <string name="kassirlar_bo_limi">Kassirlar bo\'limi</string>
 </resources>

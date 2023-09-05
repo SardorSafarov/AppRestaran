@@ -23,6 +23,7 @@
             android:paddingStart="@dimen/radius_10dp"
             android:src="@drawable/ic_hamburger"
             app:layout_constraintBottom_toBottomOf="parent"
+            android:transitionName="icon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -76,6 +77,7 @@
                 android:rowCount="2">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/btn_ofisant"
                     android:layout_rowWeight="2"
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
@@ -103,6 +105,7 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/btn_cooke"
                     android:layout_rowWeight="2"
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
@@ -130,6 +133,7 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/btn_kassr"
                     android:layout_rowWeight="2"
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
@@ -157,6 +161,7 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/btn_warehouse"
                     android:layout_rowWeight="2"
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
@@ -184,6 +189,7 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/btn_manager"
                     android:layout_rowWeight="2"
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
@@ -211,6 +217,7 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/btn_tabele"
                     android:layout_rowWeight="2"
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill"
