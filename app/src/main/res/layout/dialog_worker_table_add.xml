@@ -46,7 +46,7 @@
             android:layout_marginBottom="@dimen/radius_10dp"
             android:text="Bekor qilish"
             android:textAllCaps="false"
-            android:textColor="#cc6659"
+            android:textColor="#FF1D00"
             android:textSize="@dimen/_18sp"
             android:textStyle="bold" />
 
@@ -59,7 +59,7 @@
             android:layout_marginBottom="@dimen/radius_10dp"
             android:text="@string/saqlash"
             android:textAllCaps="false"
-            android:textColor="#66a4d2"
+            android:textColor="#0092FF"
             android:textSize="@dimen/_18sp"
             android:textStyle="bold" />
     </androidx.appcompat.widget.LinearLayoutCompat>
