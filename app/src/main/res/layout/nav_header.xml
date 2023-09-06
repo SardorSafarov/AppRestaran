@@ -3,10 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:background="@color/yellow"
-    >
-
+    android:layout_height="wrap_content"
+    android:background="@color/yellow">
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,6 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/text_admin_name"
         android:layout_width="wrap_content"
@@ -30,8 +29,10 @@
     <TextView
         android:id="@+id/text_admin_phone_number"
         android:layout_width="wrap_content"
-        android:layout_marginTop="@dimen/radius_10dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/radius_10dp"
+        android:layout_marginBottom="@dimen/padding_margin_30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/text_admin_name"
         app:layout_constraintStart_toStartOf="@+id/text_admin_name"
         app:layout_constraintTop_toBottomOf="@+id/text_admin_name" />

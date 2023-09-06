@@ -82,4 +82,6 @@
     <string name="menejerlar_bo_limi">Menejerlar bo\'limi</string>
     <string name="oshpazlar_bo_limi">Oshpazlar bo\'limi</string>
     <string name="kassirlar_bo_limi">Kassirlar bo\'limi</string>
+    <string name="hajmi">Hajmi</string>
+    <string name="xolati">Xolati</string>
 </resources>
