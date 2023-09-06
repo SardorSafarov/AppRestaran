@@ -49,16 +49,16 @@ class SharePereferenseHelper(private val context: Context) {
     }
 
     fun getAppLanguage() = preferences.getString("language", "uz").toString()
-//
-//
-//
-//    fun setAccessPhone(phone: String) {
-//        editor = preferences.edit()
-//        editor.putString(PHONE, phone)
-//        editor.apply()
-//    }
-//
-//    fun getAccessPhone() = preferences.getString(PHONE, "empty").toString()
+
+
+
+    fun setAdminPhoneNumber(phone: String) {
+        editor = preferences.edit()
+        editor.putString("admin_phone_number", phone)
+        editor.apply()
+    }
+
+    fun getAdminPhoneNumber() = preferences.getString("admin_phone_number", "empty").toString()
 
     fun setAccessDeputatId(phone: String) {
         editor = preferences.edit()

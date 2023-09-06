@@ -14,59 +14,70 @@
         tools:targetApi="31">
         <activity
             android:name=".activity.departments.product.ProductAddActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.departments.product.ProductAddDepartamensActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.departments.TarifActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.departments.SettingsActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.departments.worker.AccountantActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.departments.worker.TablesActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.departments.worker.WarehouseWorkerActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.departments.worker.ManagersActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.departments.worker.CookActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.departments.worker.OfitsantsActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.departments.WearHouseProductActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.departments.product.ProductActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.pinCode.CheckPinCodeActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.pinCode.RepeatPinCodeActivit"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".activity.pinCode.PinCodeActivity"
-            android:exported="true"
+
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.adminPanel.AdminMainActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activity.adminPanel.AdminRegisterActivity"
@@ -88,7 +99,13 @@
         <activity
             android:name=".activity.splashScren.SplashScreenActivity"
             android:exported="true"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

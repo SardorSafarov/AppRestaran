@@ -37,6 +37,7 @@ class AdminRegisterActivity : AppCompatActivity() {
             if (message == "ok") {
                 sharePereferenseHelper.setAdminName(binding.edtAdminName.text.toString())
                 sharePereferenseHelper.setRestaranName(binding.edtRestaranName.text.toString())
+                sharePereferenseHelper.setAdminPhoneNumber(binding.textCountryCode.text.toString()+binding.edtPhoneNumber.text.toString())
                 finish()
             } else {
                 tosat(this@AdminRegisterActivity, message)

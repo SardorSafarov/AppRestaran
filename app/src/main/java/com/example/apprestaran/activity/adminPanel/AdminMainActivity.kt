@@ -7,6 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.Gravity
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -18,7 +19,9 @@ import com.example.apprestaran.activity.departments.product.ProductActivity
 import com.example.apprestaran.activity.departments.SettingsActivity
 import com.example.apprestaran.activity.departments.TarifActivity
 import com.example.apprestaran.activity.departments.WearHouseProductActivity
+import com.example.apprestaran.activity.login.LoginActivity
 import com.example.apprestaran.databinding.ActivityAdminMainBinding
+import com.example.apprestaran.localMemory.SharePereferenseHelper
 import com.example.apprestaran.need.tosat
 import com.google.android.material.navigation.NavigationView
 
@@ -29,17 +32,22 @@ class AdminMainActivity : AppCompatActivity(), DrawerOnOffInteface {
     private lateinit var navController: NavController
     var doubleBackToExitPressedOnce = false
     lateinit var drawer: DrawerLayout
-
+    lateinit var sharePereferenseHelper: SharePereferenseHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAdminMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        sharePereferenseHelper = SharePereferenseHelper(this)
         navController = findNavController(R.id.nav_host_fragment_activity_admin_main)
         setupWithNavController(binding.navView, navController)
         navigationFragment()
+        getAdminData()
         navigationDrawerItemClick()
         drawer = binding.drawerLayout
+
     }
+
+
 
     private fun navigationDrawerItemClick() {
 
@@ -82,6 +90,14 @@ class AdminMainActivity : AppCompatActivity(), DrawerOnOffInteface {
                         var anim = ActivityOptions.makeSceneTransitionAnimation(this@AdminMainActivity).toBundle()
                         var i = Intent(this@AdminMainActivity, SettingsActivity::class.java)
                         startActivity(i,anim)
+                        true
+                    }
+                    R.id.nav_drawer_log_out->{
+                        sharePereferenseHelper.setPinCode("empty")
+                        var anim = ActivityOptions.makeSceneTransitionAnimation(this@AdminMainActivity).toBundle()
+                        var i = Intent(this@AdminMainActivity, LoginActivity::class.java)
+                        startActivity(i,anim)
+                        finishAffinity()
                         true
                     }
                     else -> true
@@ -129,7 +145,13 @@ class AdminMainActivity : AppCompatActivity(), DrawerOnOffInteface {
         }
     }
 
-
+    private fun getAdminData() {
+        var view =binding.navDrawerView.getHeaderView(0)
+        var textAdminName = view.findViewById<TextView>(R.id.text_admin_name)
+        var textAdminPoneNumber = view.findViewById<TextView>(R.id.text_admin_phone_number)
+        textAdminName.text = sharePereferenseHelper.getAdminName()
+        textAdminPoneNumber.text = sharePereferenseHelper.getAdminPhoneNumber()
+    }
     override fun onBackPressed() {
         if (doubleBackToExitPressedOnce) {
             finish()
